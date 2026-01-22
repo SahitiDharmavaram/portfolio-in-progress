@@ -74,7 +74,10 @@ const Hero: React.FC = () => {
     <section className="hero" id="home">
       <div className="hero-content">
         {notificationVisible && (
-          <div className={`ios-notification ${notificationExiting ? 'exiting' : ''}`}>
+          <a
+            href="mailto:sd3976@columbia.edu?subject=Re: It's so nice to meet you!"
+            className={`ios-notification ${notificationExiting ? 'exiting' : ''}`}
+          >
             <div className="notification-icon">
               <span>SD</span>
             </div>
@@ -86,7 +89,7 @@ const Hero: React.FC = () => {
               <div className="notification-title">Sahiti Dharmavaram</div>
               <div className="notification-message">It's so nice to meet you!</div>
             </div>
-          </div>
+          </a>
         )}
         <div className="typing-container">
           <span className="static-text">I design to </span>

@@ -121,7 +121,7 @@
 }
 
 .static-text {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
   color: #1a1a1a;
   letter-spacing: 0.5px;
@@ -129,7 +129,7 @@
 }
 
 .dynamic-text {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -188,6 +188,26 @@
   background: rgba(184, 98, 115, 0.1);
 }
 
+@media (max-width: 1200px) {
+  .static-text {
+    font-size: 36px;
+  }
+
+  .dynamic-text {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .static-text {
+    font-size: 32px;
+  }
+
+  .dynamic-text {
+    font-size: 32px;
+  }
+}
+
 @media (max-width: 810px) {
   .hero {
     padding: 100px 24px 60px;
@@ -206,17 +226,28 @@
   }
 
   .static-text {
+    font-size: 28px;
+  }
+
+  .dynamic-text {
+    font-size: 26px;
+    min-height: 38px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .static-text {
     font-size: 24px;
   }
 
   .dynamic-text {
     font-size: 22px;
     min-height: 32px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    flex-wrap: wrap;
   }
 }
 

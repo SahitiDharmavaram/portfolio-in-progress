@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
         >
           resume
         </a>
-        <a href="#contact" className="nav-link">contact</a>
+        <a href="mailto:sd3976@columbia.edu" className="nav-link">contact</a>
 
         <button
           className={`hamburger ${menuOpen ? 'open' : ''}`}
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
         >
           resume
         </a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>contact</a>
+        <a href="mailto:sd3976@columbia.edu" onClick={() => setMenuOpen(false)}>contact</a>
       </div>
     </nav>
   );
