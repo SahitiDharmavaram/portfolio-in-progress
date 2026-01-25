@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { DarkModeProvider } from './contexts/DarkModeContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Landmarkr from './pages/Landmarkr';
@@ -9,18 +10,20 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/landmarkr" element={<Landmarkr />} />
-          <Route path="/phonepe" element={<PhonePe />} />
-          <Route path="/kitchencraft" element={<KitchenCraft />} />
-          <Route path="/xai" element={<XAI />} />
-        </Routes>
-      </div>
-    </Router>
+    <DarkModeProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/landmarkr" element={<Landmarkr />} />
+            <Route path="/phonepe" element={<PhonePe />} />
+            <Route path="/kitchencraft" element={<KitchenCraft />} />
+            <Route path="/xai" element={<XAI />} />
+          </Routes>
+        </div>
+      </Router>
+    </DarkModeProvider>
   );
 }
 

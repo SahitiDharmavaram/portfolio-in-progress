@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+
+.quotes {
+  padding: 100px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.quotes-container {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 600;
+  font-style: italic;
+  color: #8d4a5a;
+  line-height: 1.4;
+  margin: 0;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.quote-text::before {
+  content: '"';
+  position: absolute;
+  left: -40px;
+  top: -10px;
+  font-size: 72px;
+  color: rgba(184, 98, 115, 0.35);
+  font-family: 'Playfair Display', serif;
+}
+
+.quote-text::after {
+  content: '"';
+  position: absolute;
+  right: -40px;
+  bottom: -20px;
+  font-size: 72px;
+  color: rgba(184, 98, 115, 0.35);
+  font-family: 'Playfair Display', serif;
+}
+
+.quote-author {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: #9d6b77;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.quote-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #6d5458;
+  line-height: 1.6;
+  margin: 20px 0 0;
+  letter-spacing: 0.2px;
+}
+
+.quote-btn {
+  padding: 14px 36px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  background: transparent;
+  color: #b86273;
+  border: 2px solid #b86273;
+  box-shadow: 0 2px 8px rgba(184, 98, 115, 0.15);
+  margin-top: 24px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(184, 98, 115, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.quote-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.quote-btn:hover {
+  background: rgba(184, 98, 115, 0.05);
+  border-color: #a05666;
+  color: #a05666;
+  box-shadow: 0 4px 16px rgba(184, 98, 115, 0.25), 0 0 0 3px rgba(184, 98, 115, 0.1);
+  transform: translateY(-2px);
+}
+
+.quote-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .quotes {
+    padding: 80px 40px;
+  }
+
+  .quote-text {
+    font-size: 36px;
+  }
+
+  .quote-text::before,
+  .quote-text::after {
+    font-size: 60px;
+  }
+
+  .quote-text::before {
+    left: -30px;
+  }
+
+  .quote-text::after {
+    right: -30px;
+  }
+
+  .quote-author {
+    font-size: 16px;
+  }
+
+  .quote-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quotes {
+    padding: 60px 24px;
+  }
+
+  .quotes-container {
+    gap: 20px;
+  }
+
+  .quote-text {
+    font-size: 28px;
+    padding: 0 20px;
+  }
+
+  .quote-text::before,
+  .quote-text::after {
+    font-size: 48px;
+  }
+
+  .quote-text::before {
+    left: -10px;
+    top: -8px;
+  }
+
+  .quote-text::after {
+    right: -10px;
+    bottom: -15px;
+  }
+
+  .quote-author {
+    font-size: 15px;
+  }
+
+  .quote-description {
+    font-size: 13px;
+  }
+
+  .quote-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+}

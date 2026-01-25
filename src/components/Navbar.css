@@ -55,6 +55,37 @@
   letter-spacing: 2px;
 }
 
+.dark-mode-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(184, 98, 115, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  right: 80px;
+  color: #b86273;
+}
+
+.dark-mode-toggle svg {
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: rgba(184, 98, 115, 0.15);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle:hover svg {
+  transform: rotate(15deg);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -133,6 +164,13 @@
 
   .nav-link {
     display: none;
+  }
+
+  .dark-mode-toggle {
+    right: 72px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 
   .hamburger {
