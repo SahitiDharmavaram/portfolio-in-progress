@@ -3,8 +3,8 @@ import './Hero.css';
 
 const phrases = [
   { text: 'translate research into insights', color: '#7a9a6d' },
+  { text: 'create human-centered products', color: '#8b6b99' },
   { text: 'build inclusive systems', color: '#c4956a' },
-  { text: 'create human-centered products', color: '#8b7355' },
   { text: 'connect data to everyday decisions', color: '#6b7b99' }
 ];
 
@@ -43,12 +43,12 @@ const Hero: React.FC = () => {
     }
   }, [displayedText, isTyping, currentPhraseIndex]);
 
-  // Auto-hide notification after 6 seconds (1.5s delay + 4.5s visible)
+  // Auto-hide notification after 6 seconds (2.06s delay + ~6s visible)
   useEffect(() => {
     const timeout = setTimeout(() => {
       setNotificationExiting(true);
       setTimeout(() => setNotificationVisible(false), 400);
-    }, 7500);
+    }, 8060);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -78,9 +78,11 @@ const Hero: React.FC = () => {
             href="mailto:sd3976@columbia.edu?subject=Re: It's so nice to meet you!"
             className={`ios-notification ${notificationExiting ? 'exiting' : ''}`}
           >
-            <div className="notification-icon">
-              <span>SD</span>
-            </div>
+            <img
+              src="/profile_pic_notif.jpg"
+              alt="Sahiti"
+              className="notification-icon-img"
+            />
             <div className="notification-content">
               <div className="notification-header">
                 <span className="notification-app">MESSAGES</span>
@@ -98,9 +100,41 @@ const Hero: React.FC = () => {
             style={{ color: phrases[currentPhraseIndex].color }}
           >
             {displayedText}
-            <span className="cursor">|</span>
+            <span className="cursor" style={{ color: phrases[currentPhraseIndex].color }}>|</span>
           </span>
         </div>
+
+        <div className="updates-box">
+          <div className="updates-header">
+            <span className="updates-label">New</span>
+            <h2 className="updates-heading">recent publications</h2>
+          </div>
+          <div className="updates-content">
+            <div className="publication-item">
+              <a 
+                href="https://drive.google.com/file/d/1iS8zby-Ngb-54jYkbXm1hEoCxtyklB7c/view" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="publication-title"
+              >
+                MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System
+              </a>
+              <span className="publication-venue">CHI '26</span>
+            </div>
+            <div className="publication-item">
+              <a 
+                href="https://drive.google.com/file/d/1wsPhUN5jJABptszdV3AHGPD5Mhf-l38e/view" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="publication-title"
+              >
+                More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare Settings
+              </a>
+              <span className="publication-venue">CHI '26</span>
+            </div>
+          </div>
+        </div>
+
         <div className="hero-buttons">
           <a href="#work" className="btn btn-primary">view case studies</a>
           <a

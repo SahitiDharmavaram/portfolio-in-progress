@@ -5,7 +5,7 @@
   right: 0;
   z-index: 1000;
   padding: 24px 80px;
-  background: #ffffff;
+  background: #f8f8f8;
 }
 
 .navbar-container {
@@ -23,10 +23,26 @@
   color: #b86273;
   transition: color 0.3s ease;
   letter-spacing: 0.5px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #b86273;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .nav-link:hover {
-  color: #d4899a;
+  color: #b86273;
 }
 
 .logo {
@@ -99,6 +115,7 @@
 .mobile-logo {
   font-size: 20px;
   font-weight: 500;
+  color: #b86273;
   letter-spacing: 2px;
 }
 

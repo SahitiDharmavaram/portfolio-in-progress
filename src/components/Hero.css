@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 120px 80px 80px 12%;
+  padding: 210px 80px 80px 12%;
 }
 
 .hero-content {
@@ -13,10 +13,10 @@
 
 .ios-notification {
   position: fixed;
-  top: 140px;
-  right: 12%;
+  top: 120px;
+  right: calc(12% - 20px);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
@@ -27,7 +27,7 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
   opacity: 0;
   transform: translateY(-20px) scale(0.95);
-  animation: popIn 0.4s ease-out 1.5s forwards;
+  animation: popIn 0.4s ease-out 2.06s forwards;
   z-index: 100;
 }
 
@@ -57,19 +57,12 @@
   }
 }
 
-.notification-icon {
+.notification-icon-img {
   width: 42px;
   height: 42px;
   min-width: 42px;
-  background: linear-gradient(135deg, #34AAFF 0%, #007AFF 100%);
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  object-fit: cover;
 }
 
 .notification-content {
@@ -137,8 +130,8 @@
 
 .cursor {
   animation: blink 1s infinite;
-  color: #888;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 @keyframes blink {
@@ -150,10 +143,114 @@
   }
 }
 
+.updates-box {
+  margin-top: 40px;
+  max-width: 920px;
+  background: rgba(184, 98, 115, 0.015);
+  border: 2px solid rgba(184, 98, 115, 0.12);
+  border-radius: 12px;
+  padding: 20px 24px 22px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.updates-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.updates-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  background: #b86273;
+  padding: 5px 12px 5px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 2px 6px rgba(184, 98, 115, 0.25);
+}
+
+.updates-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+.updates-heading {
+  font-size: 15px;
+  font-weight: 400;
+  color: #b86273;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.updates-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.publication-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.publication-title {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #2a2a2a;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.publication-title:hover {
+  color: #b86273;
+}
+
+.publication-venue {
+  font-size: 11px;
+  font-weight: 600;
+  color: #b86273;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid rgba(184, 98, 115, 0.25);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .btn {
@@ -234,6 +331,26 @@
     min-height: 38px;
   }
 
+  .updates-box {
+    margin: 28px auto 0;
+    padding: 18px 20px 20px;
+  }
+
+  .updates-header {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+
+  .publication-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .publication-title {
+    font-size: 13px;
+  }
+
   .hero-buttons {
     justify-content: center;
     flex-wrap: wrap;
@@ -259,6 +376,43 @@
   .dynamic-text {
     font-size: 18px;
     min-height: 28px;
+  }
+
+  .updates-box {
+    padding: 16px 16px 18px;
+  }
+
+  .updates-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .updates-label {
+    font-size: 9px;
+    padding: 3px 8px 3px 6px;
+    gap: 5px;
+  }
+
+  .updates-label::before {
+    width: 5px;
+    height: 5px;
+  }
+
+  .updates-heading {
+    font-size: 14px;
+  }
+
+  .updates-content {
+    gap: 10px;
+  }
+
+  .publication-title {
+    font-size: 12px;
+  }
+
+  .publication-venue {
+    font-size: 10px;
   }
 
   .hero-buttons {

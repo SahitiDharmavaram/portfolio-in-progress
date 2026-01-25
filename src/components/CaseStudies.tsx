@@ -5,6 +5,7 @@ interface CaseStudy {
   id: number;
   title: string;
   brandColor: string;
+  coverImage?: string;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -12,6 +13,7 @@ const caseStudies: CaseStudy[] = [
     id: 1,
     title: 'Landmarkr',
     brandColor: '#FFD686',
+    coverImage: '/landmarkr-cover-pic.png',
   },
   {
     id: 2,
@@ -22,11 +24,13 @@ const caseStudies: CaseStudy[] = [
     id: 3,
     title: 'KitchenCraft',
     brandColor: '#50AD66',
+    coverImage: '/kitchencraft-cover-pic.png',
   },
   {
     id: 4,
     title: 'XAI-Powered UI for Medical Practitioners',
     brandColor: '#8A0200',
+    coverImage: '/xai-cover-pic.png',
   },
 ];
 
@@ -45,7 +49,15 @@ const CaseStudies: React.FC = () => {
                 className="card-image-placeholder"
                 style={{ backgroundColor: study.brandColor }}
               >
-                <span className="coming-soon">Coming Soon</span>
+                {study.coverImage ? (
+                  <img
+                    src={study.coverImage}
+                    alt={study.title}
+                    className="card-cover-image"
+                  />
+                ) : (
+                  <span className="coming-soon">Coming Soon</span>
+                )}
               </div>
               <h3 className="card-title">{study.title}</h3>
             </div>

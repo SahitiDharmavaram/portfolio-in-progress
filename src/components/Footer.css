@@ -1,0 +1,132 @@
+.footer {
+  background: #b86273;
+  padding: 60px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-heading {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.footer-btn {
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: #ffffff;
+  color: #b86273;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+}
+
+.footer-btn:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 810px) {
+  .footer {
+    padding: 50px 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-main {
+    align-items: center;
+  }
+
+  .footer-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 24px;
+  }
+
+  .footer-heading {
+    font-size: 24px;
+  }
+
+  .footer-btn {
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  .footer-icons {
+    gap: 16px;
+  }
+
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
