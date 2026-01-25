@@ -117,7 +117,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className="publication-title"
               >
-                MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System
+                MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System <span className="publication-link">&lt;link&gt;</span>
               </a>
               <span className="publication-venue">CHI '26</span>
             </div>
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 className="publication-title"
               >
-                More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare Settings
+                More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare Settings <span className="publication-link">&lt;link&gt;</span>
               </a>
               <span className="publication-venue">CHI '26</span>
             </div>

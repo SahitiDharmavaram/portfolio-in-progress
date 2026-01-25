@@ -16,7 +16,7 @@
   top: 120px;
   right: calc(12% - 20px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
@@ -63,6 +63,7 @@
   min-width: 42px;
   border-radius: 10px;
   object-fit: cover;
+  margin-top: 18px;
 }
 
 .notification-content {
@@ -146,11 +147,12 @@
 .updates-box {
   margin-top: 40px;
   max-width: 920px;
-  background: rgba(184, 98, 115, 0.015);
-  border: 2px solid rgba(184, 98, 115, 0.12);
-  border-radius: 12px;
-  padding: 20px 24px 22px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  background: rgba(184, 98, 115, 0.025);
+  border: 1.5px solid rgba(184, 98, 115, 0.15);
+  border-radius: 16px;
+  padding: 24px 28px 26px;
+  box-shadow: 0 2px 8px rgba(184, 98, 115, 0.04);
+  backdrop-filter: blur(10px);
 }
 
 .updates-header {
@@ -200,7 +202,7 @@
 .updates-heading {
   font-size: 15px;
   font-weight: 400;
-  color: #b86273;
+  color: #1a1a1a;
   margin: 0;
   letter-spacing: 0.2px;
 }
@@ -224,9 +226,6 @@
   line-height: 1.5;
   margin: 0;
   flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -247,6 +246,11 @@
   border-radius: 3px;
 }
 
+.publication-link {
+  color: #b86273;
+  font-weight: 600;
+}
+
 .hero-buttons {
   display: flex;
   gap: 16px;
@@ -254,35 +258,42 @@
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 14px 32px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
+  letter-spacing: 0.2px;
 }
 
 .btn-primary {
   background: #b86273;
   color: #ffffff;
   border: 2px solid #b86273;
+  box-shadow: 0 4px 12px rgba(184, 98, 115, 0.2);
 }
 
 .btn-primary:hover {
-  background: #d4899a;
-  border-color: #d4899a;
+  background: #a05666;
+  border-color: #a05666;
+  box-shadow: 0 6px 20px rgba(184, 98, 115, 0.3);
+  transform: translateY(-2px);
 }
 
 .btn-outline {
   background: transparent;
-  color: #b86273;
-  border: 2px solid #b86273;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline:hover {
-  background: rgba(184, 98, 115, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 1200px) {

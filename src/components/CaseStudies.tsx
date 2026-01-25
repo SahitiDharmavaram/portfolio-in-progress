@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CaseStudies.css';
 
 interface CaseStudy {
@@ -6,6 +7,7 @@ interface CaseStudy {
   title: string;
   brandColor: string;
   coverImage?: string;
+  link: string;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -14,23 +16,27 @@ const caseStudies: CaseStudy[] = [
     title: 'Landmarkr',
     brandColor: '#FFD686',
     coverImage: '/landmarkr-cover-pic.png',
+    link: '/landmarkr',
   },
   {
     id: 2,
     title: "Remaking India's Largest Online Payments Platform",
     brandColor: '#6739B7',
+    link: '/phonepe',
   },
   {
     id: 3,
     title: 'KitchenCraft',
     brandColor: '#50AD66',
     coverImage: '/kitchencraft-cover-pic.png',
+    link: '/kitchencraft',
   },
   {
     id: 4,
     title: 'XAI-Powered UI for Medical Practitioners',
     brandColor: '#8A0200',
     coverImage: '/xai-cover-pic.png',
+    link: '/xai',
   },
 ];
 
@@ -39,15 +45,16 @@ const CaseStudies: React.FC = () => {
     <section className="case-studies" id="work">
       <div className="case-studies-container">
         {caseStudies.map((study) => (
-          <div
+          <Link
             key={study.id}
+            to={study.link}
             className="case-study-card"
-            style={{ '--brand-color': study.brandColor } as React.CSSProperties}
+            style={{ '--brand-color': study.brandColor, textDecoration: 'none' } as React.CSSProperties}
           >
             <div className="card-content">
               <div
                 className="card-image-placeholder"
-                style={{ backgroundColor: study.brandColor }}
+                style={{ backgroundColor: '#ffffff' }}
               >
                 {study.coverImage ? (
                   <img
@@ -56,12 +63,12 @@ const CaseStudies: React.FC = () => {
                     className="card-cover-image"
                   />
                 ) : (
-                  <span className="coming-soon">Coming Soon</span>
+                  <span className="coming-soon" style={{ backgroundColor: study.brandColor }}>Coming Soon</span>
                 )}
               </div>
               <h3 className="card-title">{study.title}</h3>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

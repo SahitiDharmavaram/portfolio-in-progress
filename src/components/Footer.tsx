@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-main">
-          <h2 className="footer-heading">let's get in touch</h2>
+          <h2 className="footer-heading">let's get in touch!</h2>
           <a href="mailto:sd3976@columbia.edu" className="footer-btn">
             click to connect
           </a>
@@ -46,6 +46,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
+      <div className="footer-credit">designed and built by sahiti</div>
     </footer>
   );
 };

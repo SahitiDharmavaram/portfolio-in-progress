@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  background: #ffffff;
+  background: linear-gradient(135deg, #fefefe 0%, #faf8f9 100%);
   min-height: 100vh;
 }
 
@@ -23,5 +23,5 @@ a {
 }
 
 ::selection {
-  background: rgba(5, 154, 255, 0.2);
+  background: rgba(184, 98, 115, 0.2);
 }
