@@ -8,11 +8,13 @@ const phrases = [
   { text: 'connect data to everyday decisions', color: '#6b7b99' }
 ];
 
+const GREETING_STORAGE_KEY = 'sessionGreetingShown';
+
 const Hero: React.FC = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
-  const [notificationVisible, setNotificationVisible] = useState(true);
+  const [notificationVisible, setNotificationVisible] = useState(false);
   const [notificationExiting, setNotificationExiting] = useState(false);
 
   useEffect(() => {
@@ -43,18 +45,41 @@ const Hero: React.FC = () => {
     }
   }, [displayedText, isTyping, currentPhraseIndex]);
 
+  useEffect(() => {
+    const hasShownGreeting = sessionStorage.getItem(GREETING_STORAGE_KEY);
+    if (!hasShownGreeting) {
+      setNotificationExiting(false);
+      setNotificationVisible(true);
+      sessionStorage.setItem(GREETING_STORAGE_KEY, 'true');
+    }
+  }, []);
+
   // Auto-hide notification after 6 seconds (2.06s delay + ~6s visible)
   useEffect(() => {
+    if (!notificationVisible) {
+      return;
+    }
+
+    let exitTimeout: ReturnType<typeof setTimeout> | undefined;
     const timeout = setTimeout(() => {
       setNotificationExiting(true);
-      setTimeout(() => setNotificationVisible(false), 400);
+      exitTimeout = setTimeout(() => setNotificationVisible(false), 400);
     }, 8060);
 
-    return () => clearTimeout(timeout);
-  }, []);
+    return () => {
+      clearTimeout(timeout);
+      if (exitTimeout) {
+        clearTimeout(exitTimeout);
+      }
+    };
+  }, [notificationVisible]);
 
   // Hide notification on scroll to projects
   useEffect(() => {
+    if (!notificationVisible) {
+      return;
+    }
+
     const handleScroll = () => {
       const workSection = document.getElementById('work');
       if (workSection) {
@@ -68,7 +93,7 @@ const Hero: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [notificationVisible]);
 
   return (
     <section className="hero" id="home">
