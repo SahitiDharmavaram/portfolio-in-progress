@@ -56,7 +56,7 @@ const About: React.FC = () => {
             </div>
             <div className="hero-image-wrapper">
               <div className="blob-image">
-                <img src="/profile_pic_notif.jpg" alt="Sahiti Dharmavaram" />
+                <img src={process.env.PUBLIC_URL + "/profile_pic_notif.jpg"} alt="Sahiti Dharmavaram" />
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="lab-image">
-              <img src="/about/lab.png" alt="SEA Lab at Columbia" />
+              <img src={process.env.PUBLIC_URL + "/about/lab.png"} alt="SEA Lab at Columbia" />
             </div>
           </div>
         </section>
@@ -133,7 +133,7 @@ const About: React.FC = () => {
         <section className="about-section arts-section">
           <div className="arts-grid">
             <div className="arts-image">
-              <img src="/about/dance.png" alt="Bharatanatyam Dance" />
+              <img src={process.env.PUBLIC_URL + "/about/dance.png"} alt="Bharatanatyam Dance" />
             </div>
             <div className="arts-text">
               <span className="section-label">Beyond the Screen</span>
