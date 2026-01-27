@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/* Landmarkr Page Layout - 80% width, centered */
+.landmarkr-page {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0 120px;
+}
+
+.landmarkr-page .back-to-home {
+  margin-left: -15px;
+  margin-top: 35px;
+}
+
+/* Case Study Header */
+.case-study-header {
+  margin-bottom: 80px;
+}
+
+.case-study-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.case-study-roles .role-tag {
+  background: rgba(255, 214, 134, 0.15);
+  border: 1px solid rgba(255, 214, 134, 0.4);
+  color: #8a7020;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.case-study-timeline-section {
+  margin: 32px 0;
+}
+
+.timeline-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.timeline-value {
+  font-size: 18px;
+  color: #3a3a3a;
+  font-weight: 400;
+}
+
+.case-study-tagline {
+  font-size: 24px;
+  font-weight: 400;
+  color: #3a3a3a;
+  line-height: 1.5;
+  margin: 32px 0;
+  font-style: italic;
+}
+
+.case-study-hero-image {
+  margin-top: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.case-study-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content Sections */
+.content-section {
+  margin-bottom: 80px;
+}
+
+/* Section Intro Text */
+.section-intro {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 800px;
+}
+
+/* Opening Section */
+.opening-section {
+  margin-bottom: 100px;
+}
+
+.section-heading-fancy {
+  font-size: 36px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.body-copy {
+  font-size: 18px;
+  color: #3a3a3a;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.highlight-text {
+  background: linear-gradient(180deg, transparent 60%, rgba(255, 214, 134, 0.4) 60%);
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+.highlight-text-subtle {
+  background: linear-gradient(180deg, transparent 65%, rgba(255, 214, 134, 0.3) 65%);
+  padding: 0 2px;
+}
+
+.fancy-subtext {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #5a5a5a;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  padding-left: 20px;
+  border-left: 3px solid rgba(255, 214, 134, 0.5);
+}
+
+.reflective-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.75;
+  margin-top: 24px;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 28px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  letter-spacing: -0.3px;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.1) 0%, rgba(255, 214, 134, 0.05) 100%);
+  border: 2px dashed rgba(255, 214, 134, 0.4);
+  border-radius: 16px;
+  padding: 80px 40px;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder span {
+  font-size: 14px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Case Study Images - No shadow */
+.landmarkr-page .case-study-image {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.case-study-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Insights Section - HCI Infographic Style */
+.insight-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.insight-block {
+  background: #fff;
+  padding: 36px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.insight-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 214, 134, 0.8) 0%, rgba(255, 214, 134, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.insight-block:hover::before {
+  opacity: 1;
+}
+
+.insight-block:hover {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.04) 0%, transparent 100%);
+}
+
+.insight-block:nth-child(1) { border-radius: 20px 0 0 0; }
+.insight-block:nth-child(2) { border-radius: 0 20px 0 0; }
+.insight-block:nth-child(3) { border-radius: 0 0 0 20px; }
+.insight-block:nth-child(4) { border-radius: 0 0 20px 0; }
+
+.insight-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.2) 0%, rgba(255, 214, 134, 0.08) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.insight-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.insight-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Gap Cards - HCI Infographic Timeline Style */
+.gap-cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 40px;
+}
+
+.gap-cards::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(255, 214, 134, 0.6) 0%, rgba(255, 214, 134, 0.2) 100%);
+}
+
+.gap-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: transparent;
+  padding: 28px 0;
+  border: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.gap-card::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 38px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid rgba(255, 214, 134, 0.8);
+  box-shadow: 0 0 0 4px rgba(255, 214, 134, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.gap-card:hover::before {
+  background: rgba(255, 214, 134, 1);
+  box-shadow: 0 0 0 6px rgba(255, 214, 134, 0.25);
+  transform: scale(1.1);
+}
+
+.gap-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #9a7520;
+  transition: all 0.3s ease;
+}
+
+.gap-card:hover .gap-icon {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.15) 0%, rgba(255, 214, 134, 0.05) 100%);
+  box-shadow: 0 6px 16px rgba(255, 214, 134, 0.2);
+  transform: translateY(-2px);
+}
+
+.gap-content {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.gap-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.gap-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Market Insights - HCI Infographic Grid */
+.market-insights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.market-insight {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.market-insight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255, 214, 134, 0.8) 0%, rgba(255, 214, 134, 0.3) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.market-insight:hover::after {
+  transform: scaleX(1);
+}
+
+.market-insight:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.market-insight .insight-number {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.5) 0%, rgba(255, 214, 134, 0.2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.market-insight .insight-content {
+  flex: 1;
+}
+
+.market-insight h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+  line-height: 1.35;
+}
+
+.market-insight p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Design System Narrative */
+.design-system-narrative {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.08) 0%, rgba(255, 214, 134, 0.02) 100%);
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 32px;
+  border-left: 4px solid rgba(255, 214, 134, 0.6);
+}
+
+.design-system-narrative p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.design-system-narrative p:last-child {
+  margin-bottom: 0;
+}
+
+/* Learnings Section */
+.learnings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.learning-card {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.learning-number {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.3) 0%, rgba(255, 214, 134, 0.15) 100%);
+  box-shadow: 0 4px 20px rgba(255, 214, 134, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learning-number span {
+  font-size: 26px;
+  font-weight: 600;
+  color: #9a7520;
+}
+
+.learning-content {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.learning-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.learning-description {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.back-to-top-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.4) 0%, rgba(255, 214, 134, 0.2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #9a7520;
+  transition: all 0.3s ease;
+}
+
+.back-to-top-text {
+  font-size: 10px;
+  color: #666;
+  position: relative;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.back-to-top-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #9a7520;
+  transition: width 0.3s ease;
+}
+
+.back-to-top:hover .back-to-top-text::after {
+  width: 100%;
+}
+
+.back-to-top:hover .back-to-top-text {
+  color: #9a7520;
+}
+
+.back-to-top:hover .back-to-top-arrow {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.6) 0%, rgba(255, 214, 134, 0.3) 100%);
+  transform: translateY(-4px);
+}
+
+/* Dark Mode */
+.dark-mode .landmarkr-page {
+  color: #e0e0e0;
+}
+
+.dark-mode .case-study-roles .role-tag {
+  background: rgba(255, 214, 134, 0.12);
+  border-color: rgba(255, 214, 134, 0.3);
+  color: #FFD686;
+}
+
+.dark-mode .timeline-label {
+  color: #999;
+}
+
+.dark-mode .timeline-value {
+  color: #d0d0d0;
+}
+
+.dark-mode .case-study-tagline {
+  color: #c0c0c0;
+}
+
+.dark-mode .section-heading-fancy,
+.dark-mode .section-heading {
+  color: #ffffff;
+}
+
+.dark-mode .body-copy {
+  color: #d0d0d0;
+}
+
+.dark-mode .section-intro {
+  color: #b0b0b0;
+}
+
+.dark-mode .highlight-text {
+  background: linear-gradient(180deg, transparent 60%, rgba(255, 214, 134, 0.25) 60%);
+}
+
+.dark-mode .highlight-text-subtle {
+  background: linear-gradient(180deg, transparent 65%, rgba(255, 214, 134, 0.2) 65%);
+}
+
+.dark-mode .fancy-subtext {
+  color: #b0b0b0;
+  border-left-color: rgba(255, 214, 134, 0.4);
+}
+
+.dark-mode .reflective-text {
+  color: #a0a0a0;
+}
+
+.dark-mode .image-placeholder {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.08) 0%, rgba(255, 214, 134, 0.03) 100%);
+  border-color: rgba(255, 214, 134, 0.25);
+}
+
+.dark-mode .insight-blocks {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .insight-block {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark-mode .insight-block:hover {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.06) 0%, transparent 100%);
+}
+
+.dark-mode .insight-icon {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.15) 0%, rgba(255, 214, 134, 0.05) 100%);
+}
+
+.dark-mode .insight-title {
+  color: #ffffff;
+}
+
+.dark-mode .insight-description {
+  color: #a0a0a0;
+}
+
+.dark-mode .gap-cards::before {
+  background: linear-gradient(180deg, rgba(255, 214, 134, 0.4) 0%, rgba(255, 214, 134, 0.1) 100%);
+}
+
+.dark-mode .gap-card::before {
+  background: #1a1a1a;
+  border-color: rgba(255, 214, 134, 0.6);
+  box-shadow: 0 0 0 4px rgba(255, 214, 134, 0.1);
+}
+
+.dark-mode .gap-card:hover::before {
+  background: rgba(255, 214, 134, 0.8);
+  box-shadow: 0 0 0 6px rgba(255, 214, 134, 0.15);
+}
+
+.dark-mode .gap-icon {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #FFD686;
+}
+
+.dark-mode .gap-card:hover .gap-icon {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.12) 0%, rgba(255, 214, 134, 0.04) 100%);
+  box-shadow: 0 6px 16px rgba(255, 214, 134, 0.1);
+}
+
+.dark-mode .gap-title {
+  color: #ffffff;
+}
+
+.dark-mode .gap-description {
+  color: #a0a0a0;
+}
+
+.dark-mode .market-insight {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .market-insight:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .market-insight .insight-number {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.4) 0%, rgba(255, 214, 134, 0.15) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.dark-mode .market-insight h4 {
+  color: #ffffff;
+}
+
+.dark-mode .market-insight p {
+  color: #a0a0a0;
+}
+
+.dark-mode .design-system-narrative {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.06) 0%, rgba(255, 214, 134, 0.01) 100%);
+  border-left-color: rgba(255, 214, 134, 0.5);
+}
+
+.dark-mode .design-system-narrative p {
+  color: #c0c0c0;
+}
+
+.dark-mode .learning-number {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.2) 0%, rgba(255, 214, 134, 0.1) 100%);
+  box-shadow: 0 4px 20px rgba(255, 214, 134, 0.15);
+}
+
+.dark-mode .learning-number span {
+  color: #FFD686;
+}
+
+.dark-mode .learning-title {
+  color: #ffffff;
+}
+
+.dark-mode .learning-description {
+  color: #a0a0a0;
+}
+
+.dark-mode .back-to-top-arrow {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.3) 0%, rgba(255, 214, 134, 0.15) 100%);
+  color: #FFD686;
+}
+
+.dark-mode .back-to-top-text {
+  color: #999;
+}
+
+.dark-mode .back-to-top:hover .back-to-top-text {
+  color: #FFD686;
+}
+
+.dark-mode .back-to-top-text::after {
+  background: #FFD686;
+}
+
+.dark-mode .back-to-top:hover .back-to-top-arrow {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.4) 0%, rgba(255, 214, 134, 0.2) 100%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .landmarkr-page {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .landmarkr-page {
+    width: 90%;
+    padding: 40px 0 100px;
+  }
+
+  .section-heading-fancy {
+    font-size: 28px;
+  }
+
+  .section-heading {
+    font-size: 24px;
+  }
+
+  .body-copy {
+    font-size: 16px;
+  }
+
+  .fancy-subtext {
+    font-size: 19px;
+    padding-left: 16px;
+  }
+
+  .insight-blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .gap-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .market-insights {
+    grid-template-columns: 1fr;
+  }
+
+  .market-insight .insight-number {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .learning-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .learning-number {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+  }
+
+  .learning-number span {
+    font-size: 22px;
+  }
+
+  .back-to-top {
+    bottom: 24px;
+    right: 16px;
+  }
+
+  .case-study-tagline {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landmarkr-page {
+    width: 92%;
+  }
+
+  .content-section {
+    margin-bottom: 60px;
+  }
+
+  .section-heading-fancy {
+    font-size: 24px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+  }
+
+  .body-copy {
+    font-size: 15px;
+  }
+
+  .fancy-subtext {
+    font-size: 17px;
+  }
+
+  .gap-card,
+  .market-insight {
+    padding: 24px;
+  }
+
+  .design-system-narrative {
+    padding: 28px;
+  }
+
+  .design-system-narrative p {
+    font-size: 15px;
+  }
+}
+
+/* Storyboard Image - Large and prominent */
+.storyboard-image {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.storyboard-image .case-study-image {
+  width: 90%;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .storyboard-image .case-study-image {
+    width: 100%;
+  }
+}

@@ -10,15 +10,15 @@ const Quotes: React.FC = () => {
         </blockquote>
         <p className="quote-author">— Henry Miller</p>
         <p className="quote-description">
-          feel free to explore my blogs where I share insights, experiences and reflections
+          check out my design story
         </p>
-        <a 
+        <a
           href="https://medium.com/@sahitid8/dancing-with-technology-my-journey-from-bharatanatyam-to-human-computer-interaction-a767478bfbcb"
           target="_blank"
           rel="noopener noreferrer"
           className="quote-btn"
         >
-          <span>click here to see how my design journey began</span>
+          <span>click here to read it!</span>
         </a>
       </div>
     </section>

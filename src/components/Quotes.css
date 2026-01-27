@@ -97,27 +97,43 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(184, 98, 115, 0.1);
+  background: rgba(220, 160, 175, 0.5);
   transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
+  transition: width 0.5s ease, height 0.5s ease, background 0.3s ease;
 }
 
 .quote-btn:hover::before {
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 600px;
 }
 
 .quote-btn:hover {
-  background: rgba(184, 98, 115, 0.05);
-  border-color: #a05666;
-  color: #a05666;
+  background: rgba(220, 160, 175, 0.35);
+  border-color: #b86273;
+  color: #8d4a5a;
   box-shadow: 0 4px 16px rgba(184, 98, 115, 0.25), 0 0 0 3px rgba(184, 98, 115, 0.1);
   transform: translateY(-2px);
+}
+
+.quote-btn:active {
+  background: #b86273;
+  border-color: #a05666;
+  color: #ffffff;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(184, 98, 115, 0.3);
+  transition: all 0.15s ease;
+}
+
+.quote-btn:active::before {
+  background: #a05666;
+  width: 600px;
+  height: 600px;
 }
 
 .quote-btn span {
   position: relative;
   z-index: 1;
+  transition: color 0.15s ease;
 }
 
 @media (max-width: 900px) {

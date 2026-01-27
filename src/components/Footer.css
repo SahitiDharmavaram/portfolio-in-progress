@@ -146,3 +146,193 @@
     height: 20px;
   }
 }
+
+/* Yellow Variant for Case Studies */
+.footer-yellow {
+  background: linear-gradient(135deg, #FFD686 0%, #e6c070 100%);
+}
+
+.footer-yellow .footer-btn {
+  background: #ffffff;
+  color: #9a7520;
+  border-color: #ffffff;
+}
+
+.footer-yellow .footer-btn:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.footer-yellow .footer-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.footer-yellow .footer-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Dark mode yellow footer */
+.dark-mode .footer-yellow {
+  background: linear-gradient(135deg, rgba(255, 214, 134, 0.25) 0%, rgba(230, 192, 112, 0.2) 100%);
+}
+
+.dark-mode .footer-yellow .footer-heading {
+  color: #FFD686;
+}
+
+.dark-mode .footer-yellow .footer-btn {
+  background: rgba(255, 214, 134, 0.2);
+  color: #FFD686;
+  border-color: rgba(255, 214, 134, 0.4);
+}
+
+.dark-mode .footer-yellow .footer-btn:hover {
+  background: rgba(255, 214, 134, 0.3);
+  color: #FFD686;
+  border-color: rgba(255, 214, 134, 0.6);
+}
+
+.dark-mode .footer-yellow .footer-icon {
+  background: rgba(255, 214, 134, 0.15);
+  color: #FFD686;
+}
+
+.dark-mode .footer-yellow .footer-icon:hover {
+  background: rgba(255, 214, 134, 0.25);
+}
+
+/* Purple Variant (PhonePe) */
+.footer-purple {
+  background: linear-gradient(135deg, #6739B7 0%, #5a32a3 100%);
+}
+
+.footer-purple .footer-btn {
+  background: #ffffff;
+  color: #6739B7;
+  border-color: #ffffff;
+}
+
+.footer-purple .footer-btn:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.dark-mode .footer-purple {
+  background: linear-gradient(135deg, rgba(103, 57, 183, 0.3) 0%, rgba(90, 50, 163, 0.25) 100%);
+}
+
+.dark-mode .footer-purple .footer-heading {
+  color: #a78bfa;
+}
+
+.dark-mode .footer-purple .footer-btn {
+  background: rgba(103, 57, 183, 0.2);
+  color: #a78bfa;
+  border-color: rgba(103, 57, 183, 0.4);
+}
+
+.dark-mode .footer-purple .footer-btn:hover {
+  background: rgba(103, 57, 183, 0.3);
+  border-color: rgba(103, 57, 183, 0.6);
+}
+
+.dark-mode .footer-purple .footer-icon {
+  background: rgba(103, 57, 183, 0.15);
+  color: #a78bfa;
+}
+
+.dark-mode .footer-purple .footer-icon:hover {
+  background: rgba(103, 57, 183, 0.25);
+}
+
+/* Green Variant (KitchenCraft) */
+.footer-green {
+  background: linear-gradient(135deg, #50AD66 0%, #45965a 100%);
+}
+
+.footer-green .footer-btn {
+  background: #ffffff;
+  color: #50AD66;
+  border-color: #ffffff;
+}
+
+.footer-green .footer-btn:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.dark-mode .footer-green {
+  background: linear-gradient(135deg, rgba(80, 173, 102, 0.3) 0%, rgba(69, 150, 90, 0.25) 100%);
+}
+
+.dark-mode .footer-green .footer-heading {
+  color: #6ee7b7;
+}
+
+.dark-mode .footer-green .footer-btn {
+  background: rgba(80, 173, 102, 0.2);
+  color: #6ee7b7;
+  border-color: rgba(80, 173, 102, 0.4);
+}
+
+.dark-mode .footer-green .footer-btn:hover {
+  background: rgba(80, 173, 102, 0.3);
+  border-color: rgba(80, 173, 102, 0.6);
+}
+
+.dark-mode .footer-green .footer-icon {
+  background: rgba(80, 173, 102, 0.15);
+  color: #6ee7b7;
+}
+
+.dark-mode .footer-green .footer-icon:hover {
+  background: rgba(80, 173, 102, 0.25);
+}
+
+/* Red Variant (XAI) */
+.footer-red {
+  background: linear-gradient(135deg, #8A0200 0%, #750200 100%);
+}
+
+.footer-red .footer-btn {
+  background: #ffffff;
+  color: #8A0200;
+  border-color: #ffffff;
+}
+
+.footer-red .footer-btn:hover {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.dark-mode .footer-red {
+  background: linear-gradient(135deg, rgba(138, 2, 0, 0.3) 0%, rgba(117, 2, 0, 0.25) 100%);
+}
+
+.dark-mode .footer-red .footer-heading {
+  color: #fca5a5;
+}
+
+.dark-mode .footer-red .footer-btn {
+  background: rgba(138, 2, 0, 0.2);
+  color: #fca5a5;
+  border-color: rgba(138, 2, 0, 0.4);
+}
+
+.dark-mode .footer-red .footer-btn:hover {
+  background: rgba(138, 2, 0, 0.3);
+  border-color: rgba(138, 2, 0, 0.6);
+}
+
+.dark-mode .footer-red .footer-icon {
+  background: rgba(138, 2, 0, 0.15);
+  color: #fca5a5;
+}
+
+.dark-mode .footer-red .footer-icon:hover {
+  background: rgba(138, 2, 0, 0.25);
+}

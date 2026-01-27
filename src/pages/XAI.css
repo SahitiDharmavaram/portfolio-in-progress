@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+/* XAI Page Layout */
+.xai-page {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 0 120px;
+}
+
+.xai-page .back-to-home {
+  margin-left: 0;
+  margin-top: 35px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.xai-page .back-to-home::before {
+  content: '\2190';
+}
+
+.xai-page .back-to-home:hover {
+  color: #8A0200;
+}
+
+/* XAI Branding Color: Red */
+.xai-page .role-tag {
+  background: rgba(138, 2, 0, 0.08);
+  border: 1px solid rgba(138, 2, 0, 0.2);
+  color: #8A0200;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Hero Image */
+.xai-hero {
+  margin-top: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+}
+
+.xai-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Publication Section */
+.xai-publication-section {
+  background: linear-gradient(135deg, rgba(138, 2, 0, 0.06) 0%, rgba(138, 2, 0, 0.02) 100%);
+  border-radius: 16px;
+  padding: 40px 48px;
+  margin: 64px 0;
+  border-left: 4px solid #8A0200;
+}
+
+.publication-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #8A0200;
+  margin-bottom: 16px;
+}
+
+.publication-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.publication-paper {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.publication-cta {
+  color: #8A0200;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.publication-cta::after {
+  content: '\2192';
+  transition: transform 0.2s ease;
+}
+
+.publication-cta:hover::after {
+  transform: translateX(4px);
+}
+
+/* Sections */
+.xai-section {
+  margin: 80px 0;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8A0200;
+  margin-bottom: 16px;
+}
+
+.xai-section-heading {
+  font-size: 32px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  letter-spacing: -0.5px;
+}
+
+.xai-body-text {
+  font-size: 17px;
+  color: #3a3a3a;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 800px;
+}
+
+/* Problem Section */
+.xai-problem-content {
+  margin-bottom: 40px;
+}
+
+.problem-stat-highlight {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.stat-large {
+  font-size: 56px;
+  font-weight: 600;
+  color: #8A0200;
+  line-height: 1;
+}
+
+.stat-context {
+  font-size: 16px;
+  color: #555;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+/* Image Blocks */
+.xai-image-block {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  margin: 32px 0;
+}
+
+.xai-image-block.featured {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+.xai-image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.xai-image-block .image-caption {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 16px;
+  background: #fafafa;
+}
+
+/* Challenge Section */
+.xai-two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.xai-challenge-card,
+.xai-need-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.challenge-label,
+.need-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8A0200;
+  margin-bottom: 16px;
+}
+
+.xai-challenge-card p,
+.xai-need-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Focus Section */
+.xai-focus-block {
+  background: linear-gradient(135deg, rgba(138, 2, 0, 0.08) 0%, rgba(138, 2, 0, 0.02) 100%);
+  border-radius: 20px;
+  padding: 48px;
+  text-align: center;
+}
+
+.focus-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8A0200;
+  margin-bottom: 20px;
+}
+
+.focus-statement {
+  font-size: 22px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Model Results */
+.xai-model-results {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  margin: 40px 0;
+}
+
+.xai-model-results h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.xai-model-results > p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.model-metrics {
+  display: flex;
+  gap: 48px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.metric-item.highlight .metric-value {
+  color: #8A0200;
+  font-size: 28px;
+}
+
+/* Technique Blocks */
+.xai-technique-block {
+  margin: 48px 0;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.technique-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.technique-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(138, 2, 0, 0.1) 0%, rgba(138, 2, 0, 0.05) 100%);
+  color: #8A0200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.technique-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.technique-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* UI Features */
+.xai-ui-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.ui-feature {
+  padding: 24px;
+  background: rgba(138, 2, 0, 0.03);
+  border-radius: 12px;
+}
+
+.ui-feature h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.ui-feature p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Outcomes Section */
+.xai-two-col.outcomes {
+  margin-top: 48px;
+}
+
+.xai-future-block,
+.xai-takeaways-block {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.xai-future-block h3,
+.xai-takeaways-block h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8A0200;
+  margin-bottom: 16px;
+}
+
+.xai-future-block p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.xai-takeaways-block ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.xai-takeaways-block li {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.xai-takeaways-block li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .xai-page {
+    width: 85%;
+  }
+
+  .xai-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .xai-ui-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-large {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .xai-page {
+    width: 90%;
+    padding: 40px 0 100px;
+  }
+
+  .xai-section-heading {
+    font-size: 26px;
+  }
+
+  .xai-publication-section {
+    padding: 28px 32px;
+  }
+
+  .xai-focus-block {
+    padding: 32px 24px;
+  }
+
+  .focus-statement {
+    font-size: 18px;
+  }
+
+  .xai-technique-block {
+    padding: 28px;
+  }
+
+  .xai-ui-features {
+    grid-template-columns: 1fr;
+  }
+
+  .model-metrics {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .problem-stat-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .stat-large {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .xai-page {
+    width: 92%;
+  }
+
+  .xai-challenge-card,
+  .xai-need-card,
+  .xai-future-block,
+  .xai-takeaways-block {
+    padding: 28px;
+  }
+}

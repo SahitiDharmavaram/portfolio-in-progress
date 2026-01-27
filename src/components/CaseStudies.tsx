@@ -6,6 +6,7 @@ interface CaseStudy {
   id: number;
   title: string;
   brandColor: string;
+  mutedBorderColor: string;
   coverImage?: string;
   link: string;
   roles: string[];
@@ -19,16 +20,18 @@ const caseStudies: CaseStudy[] = [
     id: 1,
     title: 'Landmarkr',
     brandColor: '#FFD686',
+    mutedBorderColor: 'rgba(255, 214, 134, 0.4)',
     coverImage: '/landmarkr-cover-pic.png',
     link: '/landmarkr',
     roles: ['Augmented Reality', 'UX Research', 'UI Design', 'Unity'],
     timeline: 'May 2025 - July 2025',
-    tagline: 'Turn places you pass by into moments you can return to',
+    tagline: 'Turn places you pass by into moments you can return to.',
   },
   {
     id: 2,
     title: "Remaking India's Largest Online Payments Platform",
     brandColor: '#6739B7',
+    mutedBorderColor: 'rgba(147, 112, 199, 0.4)',
     coverImage: '/phonepe-profile-pic.png',
     link: '/phonepe',
     roles: ['Research', 'Visual Design', 'Strategy', 'Prototyping', 'Testing'],
@@ -39,6 +42,7 @@ const caseStudies: CaseStudy[] = [
     id: 3,
     title: 'KitchenCraft',
     brandColor: '#50AD66',
+    mutedBorderColor: 'rgba(120, 190, 140, 0.4)',
     coverImage: '/kitchencraft-cover-pic.png',
     link: '/kitchencraft',
     roles: ['UI Design', 'UX Research', 'User Studies', 'Pitching', 'Prototyping'],
@@ -49,6 +53,7 @@ const caseStudies: CaseStudy[] = [
     id: 4,
     title: 'XAI-Powered UI for Medical Practitioners',
     brandColor: '#8A0200',
+    mutedBorderColor: 'rgba(180, 100, 100, 0.4)',
     coverImage: '/xai-cover-pic.png',
     link: '/xai',
     roles: ['Full-Stack Development', 'UI Design', 'Research', 'Data Analysis'],
@@ -67,23 +72,29 @@ const CaseStudies: React.FC = () => {
             key={study.id}
             to={study.link}
             className="case-study-card"
-            style={{ '--brand-color': study.brandColor, textDecoration: 'none' } as React.CSSProperties}
+            style={{
+              '--brand-color': study.brandColor,
+              '--muted-border-color': study.mutedBorderColor,
+              textDecoration: 'none'
+            } as React.CSSProperties}
           >
             <div className="card-content">
-              <h3 className="card-title">{study.title}</h3>
+              <div className="card-header">
+                <h3 className="card-title">{study.title}</h3>
+                {study.specialNote && (
+                  <div className="card-special-note">{study.specialNote}</div>
+                )}
+              </div>
               <div className="card-bottom">
                 <div className="card-left">
-                  {study.specialNote && (
-                    <div className="card-special-note">{study.specialNote}</div>
-                  )}
                   <div className="card-roles">
                     {study.roles.map((role, index) => (
-                      <span 
-                        key={index} 
+                      <span
+                        key={index}
                         className="role-tag"
-                        style={{ 
-                          backgroundColor: `${study.brandColor}15`,
-                          borderColor: `${study.brandColor}80`
+                        style={{
+                          backgroundColor: `${study.brandColor}20`,
+                          borderColor: `${study.brandColor}50`
                         }}
                       >
                         {role}
@@ -94,10 +105,7 @@ const CaseStudies: React.FC = () => {
                   <p className="card-tagline">{study.tagline}</p>
                 </div>
                 <div className="card-right">
-                  <div
-                    className="card-image-placeholder"
-                    style={{ backgroundColor: '#ffffff' }}
-                  >
+                  <div className="card-image-placeholder">
                     {study.coverImage ? (
                       <img
                         src={study.coverImage}

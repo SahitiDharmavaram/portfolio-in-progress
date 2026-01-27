@@ -1,9 +1,14 @@
 import React from 'react';
 import './Footer.css';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  variant?: 'pink' | 'yellow' | 'purple' | 'green' | 'red';
+}
+
+const Footer: React.FC<FooterProps> = ({ variant = 'pink' }) => {
+  const variantClass = variant !== 'pink' ? `footer-${variant}` : '';
   return (
-    <footer className="footer">
+    <footer className={`footer ${variantClass}`}>
       <div className="footer-content">
         <div className="footer-main">
           <h2 className="footer-heading">let's get in touch!</h2>
@@ -52,3 +57,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+export type { FooterProps };
