@@ -32,7 +32,7 @@ const About: React.FC = () => {
   return (
     <>
       <div className="about-page">
-        <Link to="/" className="back-to-home">
+        <Link to="/" className="back-to-home" style={{ marginTop: '20px' }}>
           Back to home
         </Link>
 
