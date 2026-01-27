@@ -52,7 +52,7 @@ const KitchenCraft: React.FC = () => {
 
           <div className="case-study-timeline-section">
             <h3 className="timeline-label">Timeline</h3>
-            <p className="timeline-value">August 2023 - December 2023</p>
+            <p className="timeline-value">Dec 2023 - July 2024</p>
           </div>
 
           <p className="case-study-tagline">
