@@ -65,7 +65,7 @@ const PhonePe: React.FC = () => {
 
           {/* Hero Image */}
           <div className="case-study-hero-image">
-            <img src="/phonepe/intro_pic.png" alt="PhonePe UPI Redesign" />
+            <img src={process.env.PUBLIC_URL + "/phonepe/intro_pic.png"} alt="PhonePe UPI Redesign" />
           </div>
         </header>
 
@@ -82,7 +82,7 @@ const PhonePe: React.FC = () => {
           <h2 className="section-heading">Context</h2>
 
           <div className="context-image-container">
-            <img src="/phonepe/context and problem visually.png" alt="Context and Problem" />
+            <img src={process.env.PUBLIC_URL + "/phonepe/context and problem visually.png"} alt="Context and Problem" />
           </div>
 
           <p className="context-text">
@@ -90,7 +90,7 @@ const PhonePe: React.FC = () => {
           </p>
 
           <div className="case-study-image" style={{ marginBottom: '32px' }}>
-            <img src="/phonepe-profile-pic.png" alt="PhonePe" />
+            <img src={process.env.PUBLIC_URL + "/phonepe-profile-pic.png"} alt="PhonePe" />
           </div>
 
           <p className="context-text">
@@ -325,7 +325,7 @@ const PhonePe: React.FC = () => {
           <h2 className="section-heading">Competitor Analysis</h2>
 
           <div className="case-study-image">
-            <img src="/phonepe/Frame 72.png" alt="Competitor Analysis" />
+            <img src={process.env.PUBLIC_URL + "/phonepe/Frame 72.png"} alt="Competitor Analysis" />
           </div>
 
           <div className="competitor-legend">
@@ -428,7 +428,7 @@ const PhonePe: React.FC = () => {
           <h2 className="section-heading">Methodology</h2>
 
           <div className="case-study-image" style={{ marginBottom: '32px' }}>
-            <img src="/phonepe/workflow.png" alt="Methodology Workflow" />
+            <img src={process.env.PUBLIC_URL + "/phonepe/workflow.png"} alt="Methodology Workflow" />
           </div>
         </section>
 
@@ -437,7 +437,7 @@ const PhonePe: React.FC = () => {
           <h2 className="section-heading">Why do we conduct thematic analysis? How does it help?</h2>
 
           <div className="case-study-image" style={{ marginBottom: '32px' }}>
-            <img src="/phonepe/thematic.png" alt="Thematic Analysis" />
+            <img src={process.env.PUBLIC_URL + "/phonepe/thematic.png"} alt="Thematic Analysis" />
           </div>
 
           <div className="two-column-layout">
@@ -453,7 +453,7 @@ const PhonePe: React.FC = () => {
               </p>
             </div>
             <div className="column-image">
-              <img src="/phonepe/thematic_analysis.png" alt="Thematic Analysis Details" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/thematic_analysis.png"} alt="Thematic Analysis Details" />
               <p className="image-caption">Thematic analysis analysing themes and descriptions along with quotation with person ID (assigned at the time of recruitment)</p>
             </div>
           </div>
@@ -463,7 +463,7 @@ const PhonePe: React.FC = () => {
         <section className="content-section social-section">
           <div className="two-column-layout reverse">
             <div className="column-image">
-              <img src="/phonepe/linkedin.png" alt="LinkedIn Post" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/linkedin.png"} alt="LinkedIn Post" />
             </div>
             <div className="column-text">
               <p>
@@ -486,7 +486,7 @@ const PhonePe: React.FC = () => {
 
           <div className="screen-showcase">
             <div className="case-study-image">
-              <img src="/phonepe/aa.png" alt="Main Screens Comparison" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/aa.png"} alt="Main Screens Comparison" />
             </div>
           </div>
 
@@ -495,7 +495,7 @@ const PhonePe: React.FC = () => {
               The information icon, in Version 2, upon clicking shows the budget limitations for each of the categories.
             </p>
             <div className="case-study-image">
-              <img src="/phonepe/ab.png" alt="Budget Limitations Feature" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/ab.png"} alt="Budget Limitations Feature" />
             </div>
           </div>
 
@@ -504,7 +504,7 @@ const PhonePe: React.FC = () => {
               Version 2 also has a graph incorporated which shows spending patterns over a month or even a day.
             </p>
             <div className="case-study-image">
-              <img src="/phonepe/ac.png" alt="Spending Patterns Graph" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/ac.png"} alt="Spending Patterns Graph" />
             </div>
           </div>
 
@@ -513,7 +513,7 @@ const PhonePe: React.FC = () => {
               An edit category button was included in Version 2 to change the payment category after the payment.
             </p>
             <div className="case-study-image">
-              <img src="/phonepe/ad.png" alt="Edit Category Feature" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/ad.png"} alt="Edit Category Feature" />
             </div>
           </div>
 
@@ -525,7 +525,7 @@ const PhonePe: React.FC = () => {
               Budget limitation pop-ups appear when the budget is exceeded. But for Version 2, I made it possible to opt out of the limit restrictions.
             </p>
             <div className="case-study-image">
-              <img src="/phonepe/ae.png" alt="Miscellaneous Category and Budget Pop-ups" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/ae.png"} alt="Miscellaneous Category and Budget Pop-ups" />
             </div>
           </div>
         </section>
@@ -539,7 +539,7 @@ const PhonePe: React.FC = () => {
               This frame displays the total amount in the bank account and the potential amount after the transaction that is about to be made.
             </p>
             <div className="case-study-image feature-image-60">
-              <img src="/phonepe/ba.png" alt="Bank Amount Display" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/ba.png"} alt="Bank Amount Display" />
             </div>
           </div>
 
@@ -548,7 +548,7 @@ const PhonePe: React.FC = () => {
               This is a delay feature that lets users think twice about a payment. All such features can be opted out of based on user convenience.
             </p>
             <div className="case-study-image feature-image-75">
-              <img src="/phonepe/bb.png" alt="Delay Feature" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/bb.png"} alt="Delay Feature" />
             </div>
           </div>
 
@@ -557,7 +557,7 @@ const PhonePe: React.FC = () => {
               The streak feature shows how many consecutive days the user has been spending under the budget limit.
             </p>
             <div className="case-study-image feature-image-75">
-              <img src="/phonepe/bc.png" alt="Streak Feature" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/bc.png"} alt="Streak Feature" />
             </div>
           </div>
 
@@ -566,7 +566,7 @@ const PhonePe: React.FC = () => {
               As financial literacy is a major space we targeted, we made this page which is a fact that can help people while the screen is loading. If a user wants to read more, they can click on the information icon.
             </p>
             <div className="case-study-image feature-image-75">
-              <img src="/phonepe/bd.png" alt="Financial Literacy Feature" />
+              <img src={process.env.PUBLIC_URL + "/phonepe/bd.png"} alt="Financial Literacy Feature" />
             </div>
           </div>
         </section>
