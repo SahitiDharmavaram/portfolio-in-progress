@@ -61,7 +61,7 @@ const KitchenCraft: React.FC = () => {
 
           {/* Hero Image - Below heading like Landmarkr */}
           <div className="case-study-hero-image">
-            <img src="/kitchencraft/1.png" alt="KitchenCraft" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/1.png"} alt="KitchenCraft" />
           </div>
         </header>
 
@@ -72,7 +72,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/2.png" alt="Current top-rated cooking apps" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/2.png"} alt="Current top-rated cooking apps" />
           </div>
         </section>
 
@@ -105,7 +105,7 @@ const KitchenCraft: React.FC = () => {
         {/* 4. Visual Insight Continuation */}
         <section className="kc-section">
           <div className="kc-image-block">
-            <img src="/kitchencraft/5.png" alt="Digital cooking inspiration insights" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/5.png"} alt="Digital cooking inspiration insights" />
           </div>
         </section>
 
@@ -218,7 +218,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/7.png" alt="Design Thinking Process" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/7.png"} alt="Design Thinking Process" />
           </div>
         </section>
 
@@ -232,19 +232,19 @@ const KitchenCraft: React.FC = () => {
 
           <div className="kc-images-vertical">
             <div className="kc-image-block">
-              <img src="/kitchencraft/8.png" alt="User Review 1" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/8.png"} alt="User Review 1" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/9.png" alt="User Review 2" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/9.png"} alt="User Review 2" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/10.png" alt="User Review 3" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/10.png"} alt="User Review 3" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/11.png" alt="User Review 4" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/11.png"} alt="User Review 4" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/12.png" alt="User Review 5" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/12.png"} alt="User Review 5" />
             </div>
           </div>
         </section>
@@ -304,7 +304,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/13.png" alt="Research Insights" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/13.png"} alt="Research Insights" />
           </div>
         </section>
 
@@ -317,7 +317,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/14.png" alt="User Personas" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/14.png"} alt="User Personas" />
           </div>
         </section>
 
@@ -329,10 +329,10 @@ const KitchenCraft: React.FC = () => {
 
           <div className="kc-images-vertical">
             <div className="kc-image-block">
-              <img src="/kitchencraft/Journey map- mark.png" alt="Journey Map: Mark" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/Journey map- mark.png"} alt="Journey Map: Mark" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/Journey map- priya.png" alt="Journey Map: Priya" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/Journey map- priya.png"} alt="Journey Map: Priya" />
             </div>
           </div>
 
@@ -343,7 +343,7 @@ const KitchenCraft: React.FC = () => {
           <h3 className="kc-subsection-heading">KitchenCraft Skaters (Identifying the Audience - Pun Intended)</h3>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/17.png" alt="KitchenCraft Skaters" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/17.png"} alt="KitchenCraft Skaters" />
           </div>
         </section>
 
@@ -357,16 +357,16 @@ const KitchenCraft: React.FC = () => {
 
           <div className="kc-images-vertical">
             <div className="kc-image-block">
-              <img src="/kitchencraft/18.png" alt="Design Phase 1" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/18.png"} alt="Design Phase 1" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/19.png" alt="Design Phase 2" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/19.png"} alt="Design Phase 2" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/20.png" alt="Design Phase 3" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/20.png"} alt="Design Phase 3" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/21.png" alt="Design Phase 4" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/21.png"} alt="Design Phase 4" />
             </div>
           </div>
 
@@ -374,10 +374,10 @@ const KitchenCraft: React.FC = () => {
 
           <div className="kc-images-vertical">
             <div className="kc-image-block">
-              <img src="/kitchencraft/22.png" alt="Low-Fidelity Wireframe" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/22.png"} alt="Low-Fidelity Wireframe" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/23.png" alt="High-Fidelity Wireframe" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/23.png"} alt="High-Fidelity Wireframe" />
             </div>
           </div>
 
@@ -390,7 +390,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/wireframe-flow.png" alt="Flowchart" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/wireframe-flow.png"} alt="Flowchart" />
           </div>
         </section>
 
@@ -407,7 +407,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/25.png" alt="Visual Design System" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/25.png"} alt="Visual Design System" />
           </div>
         </section>
 
@@ -441,7 +441,7 @@ const KitchenCraft: React.FC = () => {
           </p>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/26.png" alt="Usability Testing Overview" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/26.png"} alt="Usability Testing Overview" />
           </div>
 
           <div className="kc-insights-list">
@@ -472,13 +472,13 @@ const KitchenCraft: React.FC = () => {
 
           <div className="kc-images-vertical">
             <div className="kc-image-block">
-              <img src="/kitchencraft/28.png" alt="Testing Insight 1" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/28.png"} alt="Testing Insight 1" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/29.png" alt="Testing Insight 2" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/29.png"} alt="Testing Insight 2" />
             </div>
             <div className="kc-image-block">
-              <img src="/kitchencraft/30.png" alt="Testing Insight 3" />
+              <img src={process.env.PUBLIC_URL + "/kitchencraft/30.png"} alt="Testing Insight 3" />
             </div>
           </div>
         </section>
@@ -488,7 +488,7 @@ const KitchenCraft: React.FC = () => {
           <h2 className="kc-section-heading">Main Screen Iterations</h2>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/Frame 52.png" alt="Main Screen Iterations" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/Frame 52.png"} alt="Main Screen Iterations" />
           </div>
         </section>
 
@@ -497,7 +497,7 @@ const KitchenCraft: React.FC = () => {
           <h2 className="kc-section-heading">End-to-End: From Cookbook Lovers to Explorers</h2>
 
           <div className="kc-image-block">
-            <img src="/kitchencraft/31.png" alt="Final Overview" />
+            <img src={process.env.PUBLIC_URL + "/kitchencraft/31.png"} alt="Final Overview" />
           </div>
         </section>
 
