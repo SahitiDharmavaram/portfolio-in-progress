@@ -6,33 +6,38 @@
 }
 
 .back-to-home {
-  display: inline-block;
+  position: fixed;
+  top: 100px;
+  left: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
-  color: #b86273;
-  font-size: 15px;
+  color: #666;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 40px;
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.back-to-home::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: #b86273;
-  transition: width 0.3s ease;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  transition: all 0.3s ease;
 }
 
 .back-to-home:hover {
-  color: #a05666;
+  color: #b86273;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateX(2px);
 }
 
-.back-to-home:hover::after {
-  width: 100%;
+.dark-mode .back-to-home {
+  background: rgba(30, 30, 30, 0.95);
+  color: #999;
+}
+
+.dark-mode .back-to-home:hover {
+  color: #d4879a;
 }
 
 .case-study-title {
@@ -571,6 +576,13 @@
 }
 
 @media (max-width: 768px) {
+  .back-to-home {
+    top: 80px;
+    left: 16px;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
   .back-to-top {
     bottom: 24px;
     right: 16px;
