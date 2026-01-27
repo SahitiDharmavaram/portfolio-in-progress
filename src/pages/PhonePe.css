@@ -8,10 +8,7 @@
   padding: 60px 0 120px;
 }
 
-.phonepe-page .back-to-home {
-  margin-left: -15px;
-  margin-top: 35px;
-}
+/* Back to home uses fixed positioning from CaseStudy.css */
 
 /* Case Study Header */
 .phonepe-page .case-study-header {
@@ -876,10 +873,17 @@
   margin: 0 auto;
 }
 
-/* 85% width feature images */
+/* 75% width feature images */
 .feature-image-75 {
-  width: 85% !important;
-  max-width: 85% !important;
+  width: 75% !important;
+  max-width: 75% !important;
+  margin: 0 auto;
+}
+
+/* 80% width feature images */
+.feature-image-80 {
+  width: 80% !important;
+  max-width: 80% !important;
   margin: 0 auto;
 }
 
