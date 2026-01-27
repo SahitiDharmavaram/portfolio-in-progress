@@ -83,7 +83,7 @@ const XAI: React.FC = () => {
             rel="noopener noreferrer"
             className="publication-cta"
           >
-            Research paper link →
+            Research paper link
           </a>
         </section>
 
