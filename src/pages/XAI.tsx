@@ -77,9 +77,14 @@ const XAI: React.FC = () => {
           <p className="publication-paper">
             Explainable Artificial Intelligence (XAI) Approach to Heart Disease Prediction
           </p>
-          <span className="publication-cta" style={{ cursor: 'default' }}>
-            Research paper available upon request
-          </span>
+          <a
+            href="https://ieeexplore.ieee.org/document/10574635"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="publication-cta"
+          >
+            Research paper link →
+          </a>
         </section>
 
         {/* The Problem Section */}
