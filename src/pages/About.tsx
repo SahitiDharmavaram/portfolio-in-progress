@@ -1,266 +1,629 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-import './About.css';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
-const About: React.FC = () => {
-  const footerRef = useRef<HTMLDivElement>(null);
-  const [bottomOffset, setBottomOffset] = useState(40);
+/* About Page Layout */
+.about-page {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 0 120px;
+}
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+.about-page .back-to-home {
+  position: fixed;
+  top: 100px;
+  left: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (footerRef.current) {
-        const footerRect = footerRef.current.getBoundingClientRect();
-        if (footerRect.top < window.innerHeight) {
-          const newBottom = window.innerHeight - footerRect.top + 20;
-          setBottomOffset(Math.max(newBottom, 40));
-        } else {
-          setBottomOffset(40);
-        }
-      }
-    };
+.about-page .back-to-home:hover {
+  color: #b86273;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateX(2px);
+}
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+/* Hero Section */
+.about-hero {
+  margin-bottom: 80px;
+}
 
-  return (
-    <>
-      <div className="about-page">
-        <Link to="/" className="back-to-home">
-          ← Back to Home
-        </Link>
+.hero-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
 
-        {/* Hero Section */}
-        <section className="about-hero">
-          <div className="hero-content-wrapper">
-            <div className="hero-text">
-              <h1 className="about-name"><span className="pink-accent">S</span>ahiti <span className="pink-accent">D</span>harmavaram</h1>
-              <p className="about-alias">(I also go by Sadie)</p>
+.hero-text {
+  flex: 1;
+}
 
-              <div className="about-intro">
-                <p className="intro-main">
-                  I'm an <span className="highlight">MSCS student at Columbia University</span> on the
-                  Vision, Graphics, Robotics, and Interaction track.
-                </p>
-                <p className="intro-research">
-                  I'm also an <span className="highlight">HCI Researcher @ Columbia</span> exploring
-                  how humans and AI coexist in healthcare and wellness.
-                </p>
-              </div>
-            </div>
-            <div className="hero-image-wrapper">
-              <div className="blob-image">
-                <img src={process.env.PUBLIC_URL + "/profile_pic_notif.jpg"} alt="Sahiti Dharmavaram" />
-              </div>
-            </div>
-          </div>
-        </section>
+.about-name {
+  font-size: 48px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
 
-        {/* Design Quote */}
-        <section className="quote-section">
-          <p className="quote-intro">One of my favorite views on design</p>
-          <blockquote className="design-quote">
-            <span className="quote-mark">"</span>
-            <p>Design is not just what it looks like and feels like. Design is how it works.</p>
-            <cite>— Steve Jobs</cite>
-          </blockquote>
-        </section>
+.pink-accent {
+  color: #b86273;
+  font-weight: 600;
+}
 
-        {/* Research Section */}
-        <section className="about-section research-section">
-          <div className="section-header">
-            <span className="section-label">Research</span>
-            <h2>Making AI Human-Centered</h2>
-          </div>
+.about-alias {
+  font-size: 16px;
+  color: #888;
+  margin: 0 0 32px 0;
+  font-style: italic;
+}
 
-          <div className="research-content">
-            <p className="research-intro">
-              My work, published at <span className="highlight-accent">CHI 2026</span>, focuses on making
-              AI more adaptive and human-centered.
-            </p>
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-            <div className="publications-grid">
-              <a
-                href="https://drive.google.com/file/d/1wsPhUN5jJABptszdV3AHGPD5Mhf-l38e/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="publication-card publication-link"
-              >
-                <div className="pub-venue">CHI '26</div>
-                <h4><strong>More than Decision Support: Exploring Patients' Longitudinal Usage of Large Language Models in Real-World Healthcare Settings</strong></h4>
-                <p>Investigating the evolution of trust in AI-assisted healthcare decision making.</p>
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1iS8zby-Ngb-54jYkbXm1hEoCxtyklB7c/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="publication-card publication-link"
-              >
-                <div className="pub-venue">CHI '26</div>
-                <h4><strong>MindfulAgents: Personalizing Mindfulness Meditation via an Expert-Aligned Multi-Agent System</strong></h4>
-                <p>Developing adaptive wellness systems for personalized meditation experiences.</p>
-              </a>
-            </div>
+.intro-main,
+.intro-research {
+  font-size: 18px;
+  color: #3a3a3a;
+  line-height: 1.7;
+  margin: 0;
+}
 
-          </div>
-        </section>
+.intro-clubs {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
 
-        {/* Lab Section */}
-        <section className="about-section lab-section">
-          <div className="lab-content">
-            <div className="lab-text">
-              <span className="section-label">The Lab</span>
-              <h2>SEA Lab @ Columbia</h2>
-              <p>
-                I'm conducting HCI Research at the SEA Lab under Professor <strong>Xuhai "Orson" Xu</strong>,
-                an assistant professor at Columbia University's Department of Biomedical Informatics and
-                a visiting faculty researcher at Google.
-              </p>
-            </div>
-            <div className="lab-image">
-              <img src={process.env.PUBLIC_URL + "/about/lab.png"} alt="SEA Lab at Columbia" />
-            </div>
-          </div>
-        </section>
+.highlight {
+  background: linear-gradient(180deg, transparent 60%, rgba(184, 98, 115, 0.2) 60%);
+  padding: 0 4px;
+  font-weight: 500;
+}
 
-        {/* Dance & Arts Section */}
-        <section className="about-section arts-section">
-          <div className="arts-grid">
-            <div className="arts-image">
-              <img src={process.env.PUBLIC_URL + "/about/dance.png"} alt="Bharatanatyam Dance" />
-            </div>
-            <div className="arts-text">
-              <span className="section-label">Beyond the Screen</span>
-              <h2>Dance & Movement</h2>
-              <p>
-                I'm a professional <strong>Bharatanatyam</strong> dancer with over <span className="highlight">14 years</span> of training.
-                Dance has taught me discipline, expression, and the art of storytelling through movement.
-              </p>
-            </div>
-          </div>
-        </section>
+.highlight-accent {
+  color: #b86273;
+  font-weight: 600;
+}
 
-        {/* Poetry Section */}
-        <section className="about-section poetry-section">
-          <div className="section-header centered">
-            <span className="section-label">Words</span>
-            <h2>Poetry</h2>
-          </div>
+/* Blob Image */
+.hero-image-wrapper {
+  flex-shrink: 0;
+}
 
-          <div className="poems-grid">
-            <div className="poem-card">
-              <h4 className="poem-title">On the Media</h4>
-              <div className="poem-content">
-                <p>
-                  <em>Opinions, as facts in disguise,<br />
-                  Spitting biased true lies,<br />
-                  Displaying the vast elysian skies,<br />
-                  Showing graceful garish cries,<br />
-                  With the naive minds' snubbed tries,<br />
-                  Along with its inescapable perennial size.</em>
-                </p>
-                <p>
-                  <em>Establishing a measurable price<br />
-                  for all of life's little joys..<br />
-                  Yes, we watch to scrutinize,<br />
-                  We watch, because they televise,<br />
-                  We hear, just what it amplifies..</em>
-                </p>
-                <p>
-                  <em>The media— now our eyes,<br />
-                  Can diminish, minimize<br />
-                  And glorify unworldly highs<br />
-                  Everything but.. real art.<br />
-                  For it never dies.</em>
-                </p>
-              </div>
-              <span className="poem-author">— sahiti</span>
-            </div>
+/* Static image container - oval shape */
+.blob-image {
+  width: 280px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 20px 50px rgba(184, 98, 115, 0.15);
+}
 
-            <div className="poem-card">
-              <h4 className="poem-title">On Individuality</h4>
-              <div className="poem-content">
-                <p>
-                  <em>How can it be black or white?<br />
-                  When it is neither wrong nor right..<br />
-                  Where did the shades in between go?<br />
-                  Did people just sink that low?<br />
-                  ..when did they all get that hollow?</em>
-                </p>
-                <p>
-                  <em>When will people want to realize,<br />
-                  Everyone's a grey with a special price,<br />
-                  Your grey is different from mine,<br />
-                  But both of ours' are just as fine.</em>
-                </p>
-              </div>
-              <span className="poem-author">— sahiti</span>
-            </div>
-          </div>
-        </section>
+.blob-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-        {/* Interests Section */}
-        <section className="about-section interests-section">
-          <div className="section-header centered">
-            <span className="section-label">Life Outside Work</span>
-            <h2>Things I Love</h2>
-          </div>
+/* Quote Section */
+.quote-section {
+  margin: 80px 0;
+  text-align: center;
+}
 
-          <div className="interests-grid">
-            <div className="interest-card activities">
-              <div className="interest-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b86273" strokeWidth="1.5">
-                  <path d="M13 4h3a2 2 0 012 2v14"/>
-                  <path d="M2 20h3"/>
-                  <path d="M13 20h9"/>
-                  <path d="M10 12V8.5a2.5 2.5 0 00-5 0V12"/>
-                  <path d="M7 12h3"/>
-                  <path d="M7 12v8"/>
-                  <path d="M10 12v8"/>
-                  <circle cx="18" cy="4" r="2"/>
-                </svg>
-              </div>
-              <h4>Activities</h4>
-              <p>Badminton, baseball, and recently I've been loving rock climbing!</p>
-            </div>
+.quote-intro {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 20px 0;
+}
 
-            <div className="interest-card movies">
-              <div className="interest-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b86273" strokeWidth="1.5">
-                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
-                  <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>
-                </svg>
-              </div>
-              <h4>Movies</h4>
-              <p>Big fan of comedy and thriller — the first Knives Out and Run are my current favorites!</p>
-            </div>
-          </div>
-        </section>
+.design-quote {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(184, 98, 115, 0.06) 0%, rgba(184, 98, 115, 0.02) 100%);
+  border-radius: 24px;
+  position: relative;
+  margin: 0;
+}
 
-      </div>
+.quote-mark {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(184, 98, 115, 0.15);
+  line-height: 1;
+}
 
-      {/* Footer */}
-      <div ref={footerRef}>
-        <Footer variant="pink" />
-      </div>
+.design-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: #3a3a3a;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-      {/* Back to Top Button */}
-      <button
-        className="back-to-top"
-        onClick={scrollToTop}
-        style={{ bottom: `${bottomOffset}px` }}
-      >
-        <span className="back-to-top-arrow">↑</span>
-        <span className="back-to-top-text">Back to the top</span>
-      </button>
-    </>
-  );
-};
+.design-quote cite {
+  font-style: normal;
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 1px;
+}
 
-export default About;
+/* Section Styles - Musical rhythm with varied spacing */
+.about-section {
+  margin: 100px 0;
+}
+
+.about-section:first-of-type {
+  margin-top: 60px;
+}
+
+.section-header {
+  margin-bottom: 32px;
+}
+
+.section-header.centered {
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #b86273;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  background: rgba(184, 98, 115, 0.08);
+  border-radius: 20px;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Research Section */
+.research-section {
+  background: linear-gradient(135deg, rgba(184, 98, 115, 0.04) 0%, rgba(184, 98, 115, 0.01) 100%);
+  border-radius: 24px;
+  padding: 48px;
+  border: 1px solid rgba(184, 98, 115, 0.08);
+}
+
+.research-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.research-intro {
+  font-size: 18px;
+  color: #3a3a3a;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.publication-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(184, 98, 115, 0.1);
+}
+
+.pub-venue {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #b86273;
+  background: rgba(184, 98, 115, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.publication-card h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.publication-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Clickable publication cards */
+.publication-link {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.publication-link:hover {
+  border-color: rgba(184, 98, 115, 0.3);
+}
+
+.publication-link h4 {
+  transition: color 0.2s ease;
+}
+
+.publication-link:hover h4 {
+  color: #b86273;
+}
+
+.research-vision {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  padding: 24px;
+  background: rgba(184, 98, 115, 0.04);
+  border-radius: 12px;
+  border-left: 3px solid #b86273;
+}
+
+.research-vision em {
+  color: #b86273;
+  font-style: italic;
+}
+
+/* Lab Section */
+.lab-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.lab-text h2 {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.lab-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.lab-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.lab-image:hover {
+  transform: translateY(-4px);
+}
+
+.lab-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Arts Section */
+.arts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.arts-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.arts-image:hover {
+  transform: translateY(-4px);
+}
+
+.arts-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.arts-text h2 {
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.arts-text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 24px 0;
+}
+
+.clubs-note {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Poetry Section */
+.poetry-section {
+  background: linear-gradient(145deg, rgba(184, 98, 115, 0.06) 0%, rgba(184, 98, 115, 0.02) 50%, rgba(255, 245, 247, 0.8) 100%);
+  border-radius: 32px;
+  padding: 56px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.poetry-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(184, 98, 115, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.poetry-section::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(184, 98, 115, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.poems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.poem-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 36px;
+  border: 1px solid rgba(184, 98, 115, 0.15);
+  box-shadow: 0 8px 32px rgba(184, 98, 115, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(184, 98, 115, 0.12);
+}
+
+.poem-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+}
+
+.poem-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #3a3a3a;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+.poem-content p {
+  margin: 0 0 20px 0;
+}
+
+.poem-content p:last-child {
+  margin-bottom: 0;
+}
+
+.poem-author {
+  display: block;
+  margin-top: 24px;
+  font-size: 14px;
+  color: #b86273;
+  font-style: italic;
+}
+
+/* Interests Section */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.interest-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.interest-card:hover {
+  /* No hover effect - keeping cards flat */
+}
+
+.interest-icon {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interest-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.interest-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.interest-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Back to Top */
+.about-page ~ .back-to-top .back-to-top-arrow {
+  background: linear-gradient(135deg, rgba(184, 98, 115, 0.2) 0%, rgba(184, 98, 115, 0.1) 100%);
+  color: #b86273;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-page {
+    width: 85%;
+  }
+
+  .hero-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    order: -1;
+  }
+
+  .lab-content,
+  .arts-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .arts-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    width: 90%;
+    padding: 40px 0 100px;
+  }
+
+  .about-name {
+    font-size: 36px;
+  }
+
+  .blob-image {
+    width: 220px;
+    height: 260px;
+  }
+
+  .publications-grid,
+  .poems-grid,
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-quote p {
+    font-size: 22px;
+  }
+
+  .about-section h2 {
+    font-size: 26px;
+  }
+
+  .about-page .back-to-home {
+    top: 80px;
+    left: 16px;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    width: 92%;
+  }
+
+  .about-name {
+    font-size: 28px;
+  }
+
+  .intro-main,
+  .intro-research {
+    font-size: 16px;
+  }
+
+  .blob-image {
+    width: 180px;
+    height: 220px;
+  }
+
+  .poem-card {
+    padding: 28px;
+  }
+
+  .poem-content {
+    font-size: 15px;
+  }
+}
