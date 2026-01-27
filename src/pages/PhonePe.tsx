@@ -55,7 +55,7 @@ const PhonePe: React.FC = () => {
           {/* Timeline Section */}
           <div className="case-study-timeline-section">
             <h3 className="timeline-label">Timeline</h3>
-            <p className="timeline-value">August 2022 - December 2022</p>
+            <p className="timeline-value">Feb 2024 - Sep 2024</p>
           </div>
 
           {/* Tagline */}
@@ -547,7 +547,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               This is a delay feature that lets users think twice about a payment. All such features can be opted out of based on user convenience.
             </p>
-            <div className="case-study-image feature-image-75">
+            <div className="case-study-image feature-image-80">
               <img src={process.env.PUBLIC_URL + "/phonepe/bb.png"} alt="Delay Feature" />
             </div>
           </div>
