@@ -62,7 +62,7 @@ const Landmarkr: React.FC = () => {
 
         {/* Hero Image */}
         <div className="case-study-hero-image">
-          <img src="/landmarkr-cover-pic.png" alt="Landmarkr" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr-cover-pic.png"} alt="Landmarkr" />
         </div>
       </header>
 
@@ -96,7 +96,7 @@ const Landmarkr: React.FC = () => {
       <section className="content-section">
         <h2 className="section-heading">Project Planning</h2>
         <div className="case-study-image">
-          <img src="/landmarkr/project%20planning.png" alt="Project Planning" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/project%20planning.png"} alt="Project Planning" />
         </div>
       </section>
 
@@ -104,7 +104,7 @@ const Landmarkr: React.FC = () => {
       <section className="content-section">
         <h2 className="section-heading">Research Process</h2>
         <div className="case-study-image">
-          <img src="/landmarkr/research%20process.png" alt="Research Process" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/research%20process.png"} alt="Research Process" />
         </div>
       </section>
 
@@ -112,7 +112,7 @@ const Landmarkr: React.FC = () => {
       <section className="content-section">
         <h2 className="section-heading">Current Apps in the Market</h2>
         <div className="case-study-image">
-          <img src="/landmarkr/competitor%20analysis.png" alt="Competitor Analysis" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/competitor%20analysis.png"} alt="Competitor Analysis" />
         </div>
       </section>
 
@@ -280,7 +280,7 @@ const Landmarkr: React.FC = () => {
         <h2 className="section-heading">The Scenario I Had in Mind</h2>
         <div className="storyboard-image">
           <div className="case-study-image">
-            <img src="/landmarkr/storyboard.png" alt="Storyboard" />
+            <img src={process.env.PUBLIC_URL + "/landmarkr/storyboard.png"} alt="Storyboard" />
           </div>
         </div>
       </section>
@@ -289,7 +289,7 @@ const Landmarkr: React.FC = () => {
       <section className="content-section">
         <h2 className="section-heading">User Journey</h2>
         <div className="case-study-image">
-          <img src="/landmarkr/user%20journey%20map.png" alt="User Journey Map" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/user%20journey%20map.png"} alt="User Journey Map" />
         </div>
       </section>
 
@@ -297,7 +297,7 @@ const Landmarkr: React.FC = () => {
       <section className="content-section">
         <h2 className="section-heading">Empathy Map</h2>
         <div className="case-study-image">
-          <img src="/landmarkr/empathy%20map.png" alt="Empathy Map" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/empathy%20map.png"} alt="Empathy Map" />
         </div>
       </section>
 
@@ -312,7 +312,7 @@ const Landmarkr: React.FC = () => {
         </div>
 
         <div className="case-study-image">
-          <img src="/landmarkr/design%20system.png" alt="Design System" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/design%20system.png"} alt="Design System" />
         </div>
       </section>
 
@@ -320,7 +320,7 @@ const Landmarkr: React.FC = () => {
       <section className="content-section">
         <h2 className="section-heading">What Users Said</h2>
         <div className="case-study-image">
-          <img src="/landmarkr/testimonials.png" alt="User Testimonials" />
+          <img src={process.env.PUBLIC_URL + "/landmarkr/testimonials.png"} alt="User Testimonials" />
         </div>
       </section>
 
