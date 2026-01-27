@@ -64,7 +64,7 @@ const XAI: React.FC = () => {
 
           {/* Hero Image */}
           <div className="case-study-hero-image xai-hero">
-            <img src="/XAI/pic_1.png" alt="XAI Heart Disease Prediction" />
+            <img src={process.env.PUBLIC_URL + "/XAI/pic_1.png"} alt="XAI Heart Disease Prediction" />
           </div>
         </header>
 
@@ -99,7 +99,7 @@ const XAI: React.FC = () => {
           </div>
 
           <div className="xai-image-block">
-            <img src="/XAI/pic_2.png" alt="CVD Statistics and Impact" />
+            <img src={process.env.PUBLIC_URL + "/XAI/pic_2.png"} alt="CVD Statistics and Impact" />
           </div>
         </section>
 
@@ -141,7 +141,7 @@ const XAI: React.FC = () => {
           </p>
 
           <div className="xai-image-block">
-            <img src="/XAI/pic_3.png" alt="Methodology Overview" />
+            <img src={process.env.PUBLIC_URL + "/XAI/pic_3.png"} alt="Methodology Overview" />
           </div>
 
           <div className="xai-model-results">
@@ -161,7 +161,7 @@ const XAI: React.FC = () => {
           </div>
 
           <div className="xai-image-block">
-            <img src="/XAI/pic_4.png" alt="Model Comparison Results" />
+            <img src={process.env.PUBLIC_URL + "/XAI/pic_4.png"} alt="Model Comparison Results" />
           </div>
         </section>
 
@@ -179,7 +179,7 @@ const XAI: React.FC = () => {
               LIME explains individual predictions by creating a simpler, interpretable model around each prediction point.
             </p>
             <div className="xai-image-block">
-              <img src="/XAI/pic_5.png" alt="LIME Explanation" />
+              <img src={process.env.PUBLIC_URL + "/XAI/pic_5.png"} alt="LIME Explanation" />
             </div>
           </div>
 
@@ -192,7 +192,7 @@ const XAI: React.FC = () => {
               SHAP values provide both local and global interpretability, showing how each feature contributes to the prediction.
             </p>
             <div className="xai-image-block">
-              <img src="/XAI/pic_6.png" alt="SHAP Force Plot" />
+              <img src={process.env.PUBLIC_URL + "/XAI/pic_6.png"} alt="SHAP Force Plot" />
               <p className="image-caption">SHAP graph explaining instance values</p>
             </div>
           </div>
@@ -208,7 +208,7 @@ const XAI: React.FC = () => {
           </p>
 
           <div className="xai-image-block featured">
-            <img src="/XAI/pic_7.png" alt="UI Overview" />
+            <img src={process.env.PUBLIC_URL + "/XAI/pic_7.png"} alt="UI Overview" />
           </div>
 
           <div className="xai-ui-features">
@@ -227,7 +227,7 @@ const XAI: React.FC = () => {
           </div>
 
           <div className="xai-image-block">
-            <img src="/XAI/pic_8.png" alt="Website Display for Practitioners" />
+            <img src={process.env.PUBLIC_URL + "/XAI/pic_8.png"} alt="Website Display for Practitioners" />
             <p className="image-caption">Complete interface displayed to medical practitioners</p>
           </div>
         </section>
