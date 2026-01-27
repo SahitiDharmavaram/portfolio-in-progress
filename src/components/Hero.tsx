@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="notification-body">
               <img
-                src="/profile_pic_notif.jpg"
+                src={process.env.PUBLIC_URL + "/profile_pic_notif.jpg"}
                 alt="Sahiti"
                 className="notification-icon-img"
               />
