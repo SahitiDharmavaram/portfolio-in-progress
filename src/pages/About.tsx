@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import './CaseStudy.css';
 import './About.css';
 
 const About: React.FC = () => {

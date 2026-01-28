@@ -8,31 +8,7 @@
   padding: 120px 0 120px;
 }
 
-.about-page .back-to-home {
-  position: fixed;
-  top: 100px;
-  left: 32px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  color: #666;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
-  z-index: 100;
-  transition: all 0.3s ease;
-}
-
-.about-page .back-to-home:hover {
-  color: #b86273;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  transform: translateX(2px);
-}
+/* Back button uses base styling from CaseStudy.css */
 
 /* Hero Section */
 .about-hero {

@@ -371,10 +371,11 @@
   .ios-notification {
     top: 76px;
     right: 16px;
-    left: 16px;
+    left: auto;
     width: auto;
-    padding: 10px 12px;
-    border-radius: 14px;
+    max-width: 280px;
+    padding: 12px 14px;
+    border-radius: 20px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
 
@@ -506,9 +507,10 @@
   .ios-notification {
     top: 72px;
     right: 12px;
-    left: 12px;
-    padding: 8px 10px;
-    border-radius: 12px;
+    left: auto;
+    max-width: 260px;
+    padding: 10px 12px;
+    border-radius: 18px;
   }
 
   .notification-header {

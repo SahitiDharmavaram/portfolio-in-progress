@@ -1,5 +1,5 @@
 .case-studies {
-  padding: 60px 0 100px;
+  padding: 100px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,7 +237,7 @@
 
 @media (max-width: 900px) {
   .case-studies {
-    padding: 40px 0 80px;
+    padding: 100px 0 80px;
   }
 
   .section-wrapper {
@@ -279,12 +279,12 @@
 
 @media (max-width: 480px) {
   .case-studies {
-    padding: 32px 0 60px;
+    padding: 100px 0 60px;
     gap: 50px;
   }
 
   .section-wrapper {
-    width: 94%;
+    width: 92%;
     margin: 0 auto;
   }
 
@@ -296,11 +296,11 @@
   }
 
   .case-studies-container {
-    gap: 24px;
+    gap: 28px;
   }
 
   .case-study-card {
-    border-radius: 18px;
+    border-radius: 20px;
   }
 
   .card-content {
@@ -308,68 +308,68 @@
   }
 
   .card-header {
-    padding: 22px 20px 14px;
-    gap: 8px;
+    padding: 24px 22px 16px;
+    gap: 10px;
   }
 
   .card-title {
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: -0.4px;
   }
 
   .card-bottom {
-    padding: 0 20px 22px 20px;
-    gap: 14px;
+    padding: 0 22px 24px 22px;
+    gap: 18px;
   }
 
   .card-left {
-    gap: 12px;
+    gap: 14px;
   }
 
   .card-right {
-    min-height: 240px;
-    padding: 12px;
-    border-radius: 10px;
+    min-height: 320px;
+    padding: 16px;
+    border-radius: 14px;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
   }
 
   .card-image-placeholder {
-    border-radius: 10px;
+    border-radius: 14px;
   }
 
   .card-cover-image {
-    padding: 8px;
+    padding: 4px;
     object-fit: contain;
   }
 
   .case-study-card:hover .card-cover-image {
-    padding: 6px;
+    padding: 2px;
   }
 
   .card-roles {
-    gap: 6px;
+    gap: 8px;
     flex-wrap: wrap;
   }
 
   .role-tag {
-    font-size: 10px;
-    padding: 6px 12px;
-    border-radius: 16px;
+    font-size: 11px;
+    padding: 8px 14px;
+    border-radius: 18px;
   }
 
   .card-timeline {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .card-tagline {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.55;
-    padding-top: 10px;
+    padding-top: 12px;
   }
 
   .card-special-note {
-    font-size: 9px;
-    padding: 5px 8px;
+    font-size: 10px;
+    padding: 6px 10px;
   }
 }
 

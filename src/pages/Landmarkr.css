@@ -8,10 +8,7 @@
   padding: 60px 0 120px;
 }
 
-.landmarkr-page .back-to-home {
-  margin-left: -15px;
-  margin-top: 35px;
-}
+/* Back button uses base styling from CaseStudy.css */
 
 /* Case Study Header */
 .case-study-header {
