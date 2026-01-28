@@ -88,7 +88,7 @@ const codeProjects: CodeProject[] = [
     title: 'Using Simple GAN Output Data as Input in the Naive Bayes Algorithm to Obtain Accuracy of Prediction',
     description: 'A machine learning project that leverages Generative Adversarial Networks (GANs) to generate synthetic heart disease data, which is then used to train and validate a Naive Bayes classifier. This approach explores how synthetic data augmentation can improve prediction accuracy in healthcare applications.',
     timeline: 'February 2023 - May 2024',
-    tags: ['Machine Learning', 'GANs', 'Data Analysis', 'Python'],
+    tags: ['Machine Learning', 'GANs', 'Healthcare AI', 'Python'],
     githubLink: 'https://github.com/SahitiDharmavaram/Using-Simple-Gan-output-data-as-input-in-the-Naive-Bayes-algorithm-to-obtain-accuracy-of-p',
     accentColor: '#D4956A',
     note: {
@@ -100,9 +100,9 @@ const codeProjects: CodeProject[] = [
   {
     id: 6,
     title: 'NLP Streamlit App for Text Insight with Speech Summarization',
-    description: 'A comprehensive Natural Language Processing application built with Streamlit that provides text analysis capabilities including summarization, sentiment detection, keyword extraction, and speech-to-text processing. The app uses BERT and other NLP models to deliver insights from text and audio inputs.',
+    description: 'A comprehensive Natural Language Processing application built with Streamlit that provides text analysis capabilities including summarization, sentiment detection, keyword extraction, and speech-to-text processing. The app uses NLP models to deliver insights from text and audio inputs.',
     timeline: 'August 2024',
-    tags: ['NLP', 'BERT', 'Streamlit', 'Speech-to-Text'],
+    tags: ['NLP', 'Accessibility', 'Streamlit', 'Python'],
     githubLink: 'https://github.com/SahitiDharmavaram/NLP-Streamlit-App-for-Text-Insight-with-Speech-Summarization',
     accentColor: '#6A88C4',
   },
