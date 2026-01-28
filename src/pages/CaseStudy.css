@@ -445,7 +445,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .case-study-page {
-    padding: 100px 40px 60px;
+    padding: 120px 40px 60px;
   }
 
   .case-study-title {
@@ -463,7 +463,7 @@
 
 @media (max-width: 600px) {
   .case-study-page {
-    padding: 90px 24px 48px;
+    padding: 100px 24px 48px;
   }
 
   .case-study-title {

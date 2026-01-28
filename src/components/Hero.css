@@ -367,46 +367,46 @@
     text-align: center;
   }
 
-  /* Mobile notification - compact and non-intrusive */
+  /* Mobile notification - positioned BELOW navbar */
   .ios-notification {
-    top: 16px;
+    top: 76px;
     right: 16px;
     left: 16px;
     width: auto;
-    padding: 12px 14px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    padding: 10px 12px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
 
   .notification-header {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .notification-app {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .notification-time {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .notification-body {
-    gap: 10px;
+    gap: 8px;
   }
 
   .notification-icon-img {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 8px;
   }
 
   .notification-title {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .notification-message {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .typing-container {
@@ -502,32 +502,32 @@
 }
 
 @media (max-width: 480px) {
-  /* Smaller notification for phones */
+  /* Smaller notification for phones - below navbar */
   .ios-notification {
-    top: 12px;
+    top: 72px;
     right: 12px;
     left: 12px;
-    padding: 10px 12px;
-    border-radius: 14px;
+    padding: 8px 10px;
+    border-radius: 12px;
   }
 
   .notification-header {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .notification-icon-img {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 6px;
   }
 
   .notification-title {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .notification-message {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .static-text {

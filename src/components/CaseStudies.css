@@ -280,24 +280,27 @@
 @media (max-width: 480px) {
   .case-studies {
     padding: 32px 0 60px;
-    gap: 60px;
+    gap: 50px;
   }
 
   .section-wrapper {
-    width: 92%;
+    width: 94%;
+    margin: 0 auto;
   }
 
   .section-title {
     font-size: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: 0;
   }
 
   .case-studies-container {
-    gap: 28px;
+    gap: 24px;
   }
 
   .case-study-card {
-    border-radius: 20px;
+    border-radius: 18px;
   }
 
   .card-content {
@@ -305,67 +308,68 @@
   }
 
   .card-header {
-    padding: 24px 24px 16px;
-    gap: 10px;
+    padding: 22px 20px 14px;
+    gap: 8px;
   }
 
   .card-title {
-    font-size: 20px;
-    letter-spacing: -0.5px;
+    font-size: 18px;
+    letter-spacing: -0.4px;
   }
 
   .card-bottom {
-    padding: 0 24px 24px 24px;
-    gap: 16px;
-  }
-
-  .card-left {
+    padding: 0 20px 22px 20px;
     gap: 14px;
   }
 
+  .card-left {
+    gap: 12px;
+  }
+
   .card-right {
-    min-height: 280px;
-    padding: 16px;
-    border-radius: 12px;
+    min-height: 240px;
+    padding: 12px;
+    border-radius: 10px;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
   }
 
   .card-image-placeholder {
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
   .card-cover-image {
-    padding: 12px;
+    padding: 8px;
     object-fit: contain;
   }
 
   .case-study-card:hover .card-cover-image {
-    padding: 10px;
+    padding: 6px;
   }
 
   .card-roles {
-    gap: 8px;
+    gap: 6px;
+    flex-wrap: wrap;
   }
 
   .role-tag {
-    font-size: 11px;
-    padding: 8px 14px;
-    border-radius: 20px;
+    font-size: 10px;
+    padding: 6px 12px;
+    border-radius: 16px;
   }
 
   .card-timeline {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .card-tagline {
-    font-size: 13px;
-    line-height: 1.6;
-    padding-top: 12px;
+    font-size: 12px;
+    line-height: 1.55;
+    padding-top: 10px;
   }
 
   .card-special-note {
-    font-size: 10px;
-    padding: 6px 10px;
+    font-size: 9px;
+    padding: 5px 8px;
   }
 }
 
