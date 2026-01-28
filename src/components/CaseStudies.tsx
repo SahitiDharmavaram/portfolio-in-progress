@@ -23,6 +23,12 @@ interface CodeProject {
   timeline: string;
   tags: string[];
   githubLink: string;
+  accentColor: string;
+  note?: {
+    text: string;
+    link: string;
+    linkText: string;
+  };
 }
 
 const caseStudies: Project[] = [
@@ -84,6 +90,12 @@ const codeProjects: CodeProject[] = [
     timeline: 'February 2023 - May 2024',
     tags: ['Machine Learning', 'GANs', 'Data Analysis', 'Python'],
     githubLink: 'https://github.com/SahitiDharmavaram/Using-Simple-Gan-output-data-as-input-in-the-Naive-Bayes-algorithm-to-obtain-accuracy-of-p',
+    accentColor: '#D4956A',
+    note: {
+      text: 'This project later led to my first published research paper',
+      link: '/xai',
+      linkText: 'view case study'
+    }
   },
   {
     id: 6,
@@ -92,6 +104,7 @@ const codeProjects: CodeProject[] = [
     timeline: 'August 2024',
     tags: ['NLP', 'BERT', 'Streamlit', 'Speech-to-Text'],
     githubLink: 'https://github.com/SahitiDharmavaram/NLP-Streamlit-App-for-Text-Insight-with-Speech-Summarization',
+    accentColor: '#6A88C4',
   },
 ];
 
@@ -179,7 +192,11 @@ interface CodeProjectItemProps {
 
 const CodeProjectItem: React.FC<CodeProjectItemProps> = ({ project }) => {
   return (
-    <div className="code-project-item">
+    <div
+      className="code-project-item"
+      style={{ '--accent-color': project.accentColor } as React.CSSProperties}
+    >
+      <div className="code-project-accent"></div>
       <div className="code-project-content">
         <div className="code-project-header">
           <h3 className="code-project-title">{project.title}</h3>
@@ -193,6 +210,15 @@ const CodeProjectItem: React.FC<CodeProjectItemProps> = ({ project }) => {
           </a>
         </div>
         <p className="code-project-description">{project.description}</p>
+        {project.note && (
+          <div className="code-project-note">
+            <span className="note-text">{project.note.text}</span>
+            <span className="note-separator">·</span>
+            <Link to={project.note.link} className="note-link">
+              {project.note.linkText}
+            </Link>
+          </div>
+        )}
         <div className="code-project-meta">
           <span className="code-project-timeline">{project.timeline}</span>
           <div className="code-project-tags">
