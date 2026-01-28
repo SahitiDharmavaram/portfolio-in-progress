@@ -183,7 +183,19 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="hero-buttons">
-          <a href="#work" className="btn btn-primary">view case studies</a>
+          <a
+            href="#work"
+            className="btn btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              const workSection = document.getElementById('work');
+              if (workSection) {
+                workSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            view case studies
+          </a>
           <a
             href="https://medium.com/@sahitid8"
             target="_blank"
