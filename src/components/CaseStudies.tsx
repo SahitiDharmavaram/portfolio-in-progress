@@ -16,6 +16,15 @@ interface Project {
   specialNote?: string;
 }
 
+interface CodeProject {
+  id: number;
+  title: string;
+  description: string;
+  timeline: string;
+  tags: string[];
+  githubLink: string;
+}
+
 const caseStudies: Project[] = [
   {
     id: 1,
@@ -65,25 +74,24 @@ const selectedProjects: Project[] = [
     timeline: 'May 2025 - July 2025',
     tagline: 'Turn places you pass by into moments you can return to.',
   },
+];
+
+const codeProjects: CodeProject[] = [
   {
     id: 5,
-    title: 'GAN for Heart Disease Prediction',
-    brandColor: '#4A90D9',
-    mutedBorderColor: 'rgba(74, 144, 217, 0.4)',
-    externalLink: 'https://github.com/SahitiDharmavaram/Using-Simple-Gan-output-data-as-input-in-the-Naive-Bayes-algorithm-to-obtain-accuracy-of-p',
-    roles: ['Machine Learning', 'GANs', 'Data Analysis', 'Python'],
+    title: 'Using Simple GAN Output Data as Input in the Naive Bayes Algorithm to Obtain Accuracy of Prediction',
+    description: 'A machine learning project that leverages Generative Adversarial Networks (GANs) to generate synthetic heart disease data, which is then used to train and validate a Naive Bayes classifier. This approach explores how synthetic data augmentation can improve prediction accuracy in healthcare applications.',
     timeline: 'February 2023 - May 2024',
-    tagline: 'Using a GAN to generate synthetic heart data and validate it with Naïve Bayes classification.',
+    tags: ['Machine Learning', 'GANs', 'Data Analysis', 'Python'],
+    githubLink: 'https://github.com/SahitiDharmavaram/Using-Simple-Gan-output-data-as-input-in-the-Naive-Bayes-algorithm-to-obtain-accuracy-of-p',
   },
   {
     id: 6,
-    title: 'NLP App with Text Insights',
-    brandColor: '#E67E22',
-    mutedBorderColor: 'rgba(230, 126, 34, 0.4)',
-    externalLink: 'https://github.com/SahitiDharmavaram/NLP-Streamlit-App-for-Text-Insight-with-Speech-Summarization',
-    roles: ['NLP', 'BERT', 'Streamlit', 'Speech-to-Text'],
+    title: 'NLP Streamlit App for Text Insight with Speech Summarization',
+    description: 'A comprehensive Natural Language Processing application built with Streamlit that provides text analysis capabilities including summarization, sentiment detection, keyword extraction, and speech-to-text processing. The app uses BERT and other NLP models to deliver insights from text and audio inputs.',
     timeline: 'August 2024',
-    tagline: 'Text analysis app with summarization, sentiment detection, and speech-to-text processing.',
+    tags: ['NLP', 'BERT', 'Streamlit', 'Speech-to-Text'],
+    githubLink: 'https://github.com/SahitiDharmavaram/NLP-Streamlit-App-for-Text-Insight-with-Speech-Summarization',
   },
 ];
 
@@ -121,14 +129,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
         <div className="card-right">
           <div className="card-image-placeholder">
-            {project.coverImage ? (
+            {project.coverImage && (
               <img
                 src={project.coverImage}
                 alt={project.title}
                 className="card-cover-image"
               />
-            ) : (
-              <span className="coming-soon" style={{ backgroundColor: project.brandColor }}>View on GitHub</span>
             )}
           </div>
         </div>
@@ -167,6 +173,39 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
+interface CodeProjectItemProps {
+  project: CodeProject;
+}
+
+const CodeProjectItem: React.FC<CodeProjectItemProps> = ({ project }) => {
+  return (
+    <div className="code-project-item">
+      <div className="code-project-content">
+        <div className="code-project-header">
+          <h3 className="code-project-title">{project.title}</h3>
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="code-link"
+          >
+            code
+          </a>
+        </div>
+        <p className="code-project-description">{project.description}</p>
+        <div className="code-project-meta">
+          <span className="code-project-timeline">{project.timeline}</span>
+          <div className="code-project-tags">
+            {project.tags.map((tag, index) => (
+              <span key={index} className="code-tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const CaseStudies: React.FC = () => {
   return (
     <section className="case-studies" id="work">
@@ -184,6 +223,11 @@ const CaseStudies: React.FC = () => {
         <div className="case-studies-container">
           {selectedProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <div className="code-projects-container">
+          {codeProjects.map((project) => (
+            <CodeProjectItem key={project.id} project={project} />
           ))}
         </div>
       </div>
