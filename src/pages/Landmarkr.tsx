@@ -34,7 +34,7 @@ const Landmarkr: React.FC = () => {
     <>
       <div className="case-study-page landmarkr-page">
       <Link to="/" className="back-to-home">
-        ← Back to home
+        back
       </Link>
 
       {/* Case Study Header */}
@@ -395,7 +395,7 @@ const Landmarkr: React.FC = () => {
             color: '#D4A84A'
           }}
         >↑</span>
-        <span className="back-to-top-text">Back to the top</span>
+        <span className="back-to-top-text">back to the top</span>
       </button>
     </>
   );

@@ -34,7 +34,7 @@ const XAI: React.FC = () => {
     <>
       <div className="case-study-page xai-page">
         <Link to="/" className="back-to-home">
-          Back to home
+          back
         </Link>
 
         {/* Case Study Header */}
@@ -83,7 +83,7 @@ const XAI: React.FC = () => {
             rel="noopener noreferrer"
             className="publication-cta"
           >
-            Research paper link
+            research paper link
           </a>
         </section>
 
@@ -278,7 +278,7 @@ const XAI: React.FC = () => {
             color: '#8A0200'
           }}
         >↑</span>
-        <span className="back-to-top-text">Back to the top</span>
+        <span className="back-to-top-text">back to the top</span>
       </button>
     </>
   );

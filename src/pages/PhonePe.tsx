@@ -34,7 +34,7 @@ const PhonePe: React.FC = () => {
     <>
       <div className="case-study-page phonepe-page">
         <Link to="/" className="back-to-home">
-          ← Back to Home
+          back
         </Link>
 
         {/* Case Study Header */}
@@ -668,7 +668,7 @@ const PhonePe: React.FC = () => {
             color: '#6739B7'
           }}
         >↑</span>
-        <span className="back-to-top-text">Back to the top</span>
+        <span className="back-to-top-text">back to the top</span>
       </button>
     </>
   );

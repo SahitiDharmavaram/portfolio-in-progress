@@ -34,7 +34,7 @@ const KitchenCraft: React.FC = () => {
     <>
       <div className="case-study-page kc-page">
         <Link to="/" className="back-to-home">
-          Back to home
+          back
         </Link>
 
         {/* Case Study Header */}
@@ -515,7 +515,7 @@ const KitchenCraft: React.FC = () => {
         onClick={scrollToTop}
       >
         <span className="back-to-top-arrow" style={{ background: 'linear-gradient(135deg, rgba(80, 173, 102, 0.2) 0%, rgba(80, 173, 102, 0.1) 100%)', color: '#50AD66' }}>↑</span>
-        <span className="back-to-top-text">Back to the top</span>
+        <span className="back-to-top-text">back to the top</span>
       </button>
     </>
   );

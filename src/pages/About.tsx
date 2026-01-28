@@ -33,7 +33,7 @@ const About: React.FC = () => {
     <>
       <div className="about-page">
         <Link to="/" className="back-to-home">
-          ← Back to Home
+          back
         </Link>
 
         {/* Hero Section */}
@@ -257,7 +257,7 @@ const About: React.FC = () => {
         style={{ bottom: `${bottomOffset}px` }}
       >
         <span className="back-to-top-arrow">↑</span>
-        <span className="back-to-top-text">Back to the top</span>
+        <span className="back-to-top-text">back to the top</span>
       </button>
     </>
   );
