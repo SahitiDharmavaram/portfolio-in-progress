@@ -196,7 +196,6 @@ const CodeProjectItem: React.FC<CodeProjectItemProps> = ({ project }) => {
       className="code-project-item"
       style={{ '--accent-color': project.accentColor } as React.CSSProperties}
     >
-      <div className="code-project-accent"></div>
       <div className="code-project-content">
         <div className="code-project-header">
           <h3 className="code-project-title">{project.title}</h3>

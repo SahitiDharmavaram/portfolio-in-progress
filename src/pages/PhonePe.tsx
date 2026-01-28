@@ -40,7 +40,7 @@ const PhonePe: React.FC = () => {
         {/* Case Study Header */}
         <header className="case-study-header">
           <h1 className="case-study-title" style={{ color: '#6739B7' }}>
-            Form A: Remaking India's Largest Online Payments Platform
+            Remaking India's Largest Online Payments Platform
           </h1>
 
           {/* Skills Section */}
