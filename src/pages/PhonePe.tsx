@@ -534,39 +534,41 @@ const PhonePe: React.FC = () => {
         <section className="content-section other-features-section">
           <h2 className="section-heading">Features users liked in version 1 that remained unchanged in version 2</h2>
 
-          <div className="feature-item">
-            <p className="feature-description">
-              This frame displays the total amount in the bank account and the potential amount after the transaction that is about to be made.
-            </p>
-            <div className="case-study-image feature-image-60">
-              <img src={process.env.PUBLIC_URL + "/phonepe/ba.png"} alt="Bank Amount Display" />
+          <div className="features-grid">
+            <div className="feature-grid-item">
+              <div className="case-study-image">
+                <img src={process.env.PUBLIC_URL + "/phonepe/ba.png"} alt="Bank Amount Display" />
+              </div>
+              <p className="feature-description">
+                This frame displays the total amount in the bank account and the potential amount after the transaction that is about to be made.
+              </p>
             </div>
-          </div>
 
-          <div className="feature-item">
-            <p className="feature-description">
-              This is a delay feature that lets users think twice about a payment. All such features can be opted out of based on user convenience.
-            </p>
-            <div className="case-study-image feature-image-100">
-              <img src={process.env.PUBLIC_URL + "/phonepe/bb.png"} alt="Delay Feature" />
+            <div className="feature-grid-item">
+              <div className="case-study-image">
+                <img src={process.env.PUBLIC_URL + "/phonepe/bb.png"} alt="Delay Feature" />
+              </div>
+              <p className="feature-description">
+                This is a delay feature that lets users think twice about a payment. All such features can be opted out of based on user convenience.
+              </p>
             </div>
-          </div>
 
-          <div className="feature-item">
-            <p className="feature-description">
-              The streak feature shows how many consecutive days the user has been spending under the budget limit.
-            </p>
-            <div className="case-study-image feature-image-100">
-              <img src={process.env.PUBLIC_URL + "/phonepe/bc.png"} alt="Streak Feature" />
+            <div className="feature-grid-item">
+              <div className="case-study-image">
+                <img src={process.env.PUBLIC_URL + "/phonepe/bc.png"} alt="Streak Feature" />
+              </div>
+              <p className="feature-description">
+                The streak feature shows how many consecutive days the user has been spending under the budget limit.
+              </p>
             </div>
-          </div>
 
-          <div className="feature-item">
-            <p className="feature-description">
-              As financial literacy is a major space we targeted, we made this page which is a fact that can help people while the screen is loading. If a user wants to read more, they can click on the information icon.
-            </p>
-            <div className="case-study-image feature-image-100">
-              <img src={process.env.PUBLIC_URL + "/phonepe/bd.png"} alt="Financial Literacy Feature" />
+            <div className="feature-grid-item">
+              <div className="case-study-image">
+                <img src={process.env.PUBLIC_URL + "/phonepe/bd.png"} alt="Financial Literacy Feature" />
+              </div>
+              <p className="feature-description">
+                As financial literacy is a major space we targeted, we made this page which is a fact that can help people while the screen is loading. If a user wants to read more, they can click on the information icon.
+              </p>
             </div>
           </div>
         </section>
