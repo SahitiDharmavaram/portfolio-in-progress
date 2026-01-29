@@ -538,7 +538,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               This frame displays the total amount in the bank account and the potential amount after the transaction that is about to be made.
             </p>
-            <div className="case-study-image feature-image-100">
+            <div className="case-study-image feature-image-60">
               <img src={process.env.PUBLIC_URL + "/phonepe/ba.png"} alt="Bank Amount Display" />
             </div>
           </div>
