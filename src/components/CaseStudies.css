@@ -1,5 +1,5 @@
 .case-studies {
-  padding: 130px 0 100px;
+  padding: 160px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,7 +237,7 @@
 
 @media (max-width: 900px) {
   .case-studies {
-    padding: 130px 0 80px;
+    padding: 160px 0 80px;
   }
 
   .section-wrapper {
@@ -279,7 +279,7 @@
 
 @media (max-width: 480px) {
   .case-studies {
-    padding: 130px 0 60px;
+    padding: 160px 0 60px;
     gap: 50px;
   }
 
