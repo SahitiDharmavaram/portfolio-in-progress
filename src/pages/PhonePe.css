@@ -894,9 +894,17 @@
   margin: 0 auto;
 }
 
+/* 100% width feature images - full width */
+.feature-image-100 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+}
+
 .other-features-section .feature-image-60 img,
 .other-features-section .feature-image-75 img,
-.other-features-section .feature-image-85 img {
+.other-features-section .feature-image-85 img,
+.other-features-section .feature-image-100 img {
   width: 100%;
   height: auto;
   display: block;

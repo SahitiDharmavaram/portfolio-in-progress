@@ -538,7 +538,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               This frame displays the total amount in the bank account and the potential amount after the transaction that is about to be made.
             </p>
-            <div className="case-study-image feature-image-80">
+            <div className="case-study-image feature-image-100">
               <img src={process.env.PUBLIC_URL + "/phonepe/ba.png"} alt="Bank Amount Display" />
             </div>
           </div>
@@ -547,7 +547,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               This is a delay feature that lets users think twice about a payment. All such features can be opted out of based on user convenience.
             </p>
-            <div className="case-study-image feature-image-85">
+            <div className="case-study-image feature-image-100">
               <img src={process.env.PUBLIC_URL + "/phonepe/bb.png"} alt="Delay Feature" />
             </div>
           </div>
@@ -556,7 +556,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               The streak feature shows how many consecutive days the user has been spending under the budget limit.
             </p>
-            <div className="case-study-image feature-image-85">
+            <div className="case-study-image feature-image-100">
               <img src={process.env.PUBLIC_URL + "/phonepe/bc.png"} alt="Streak Feature" />
             </div>
           </div>
@@ -565,7 +565,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               As financial literacy is a major space we targeted, we made this page which is a fact that can help people while the screen is loading. If a user wants to read more, they can click on the information icon.
             </p>
-            <div className="case-study-image feature-image-80">
+            <div className="case-study-image feature-image-100">
               <img src={process.env.PUBLIC_URL + "/phonepe/bd.png"} alt="Financial Literacy Feature" />
             </div>
           </div>
