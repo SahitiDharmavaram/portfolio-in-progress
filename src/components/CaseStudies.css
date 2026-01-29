@@ -310,11 +310,15 @@
   .card-header {
     padding: 24px 22px 16px;
     gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .card-title {
     font-size: 20px;
     letter-spacing: -0.4px;
+    text-align: center;
   }
 
   .card-bottom {
@@ -324,11 +328,12 @@
 
   .card-left {
     gap: 14px;
+    align-items: center;
   }
 
   .card-right {
-    min-height: 320px;
-    padding: 16px;
+    min-height: 400px;
+    padding: 20px;
     border-radius: 14px;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
   }
@@ -338,8 +343,9 @@
   }
 
   .card-cover-image {
-    padding: 4px;
+    padding: 0;
     object-fit: contain;
+    max-height: 360px;
   }
 
   .case-study-card:hover .card-cover-image {
@@ -349,6 +355,7 @@
   .card-roles {
     gap: 8px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .role-tag {
@@ -359,12 +366,14 @@
 
   .card-timeline {
     font-size: 12px;
+    text-align: center;
   }
 
   .card-tagline {
     font-size: 13px;
     line-height: 1.55;
     padding-top: 12px;
+    text-align: center;
   }
 
   .card-special-note {
