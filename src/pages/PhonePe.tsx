@@ -547,7 +547,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               This is a delay feature that lets users think twice about a payment. All such features can be opted out of based on user convenience.
             </p>
-            <div className="case-study-image feature-image-80">
+            <div className="case-study-image feature-image-85">
               <img src={process.env.PUBLIC_URL + "/phonepe/bb.png"} alt="Delay Feature" />
             </div>
           </div>
@@ -556,7 +556,7 @@ const PhonePe: React.FC = () => {
             <p className="feature-description">
               The streak feature shows how many consecutive days the user has been spending under the budget limit.
             </p>
-            <div className="case-study-image feature-image-80">
+            <div className="case-study-image feature-image-85">
               <img src={process.env.PUBLIC_URL + "/phonepe/bc.png"} alt="Streak Feature" />
             </div>
           </div>

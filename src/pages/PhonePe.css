@@ -887,8 +887,16 @@
   margin: 0 auto;
 }
 
+/* 85% width feature images */
+.feature-image-85 {
+  width: 85% !important;
+  max-width: 85% !important;
+  margin: 0 auto;
+}
+
 .other-features-section .feature-image-60 img,
-.other-features-section .feature-image-75 img {
+.other-features-section .feature-image-75 img,
+.other-features-section .feature-image-85 img {
   width: 100%;
   height: auto;
   display: block;
