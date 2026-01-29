@@ -246,6 +246,11 @@
 
   .case-studies-container {
     gap: 36px;
+    align-items: center;
+  }
+
+  .case-study-card {
+    width: 100%;
   }
 
   .card-content {
@@ -256,10 +261,13 @@
     padding: 32px 36px 24px;
     flex-direction: column;
     gap: 12px;
+    align-items: center;
+    text-align: center;
   }
 
   .card-title {
     font-size: 24px;
+    text-align: center;
   }
 
   .card-bottom {
@@ -267,13 +275,26 @@
     gap: 20px;
   }
 
-  .card-right {
-    min-height: 320px;
-    padding: 24px;
+  .card-left {
+    align-items: center;
+  }
+
+  .card-roles {
+    justify-content: center;
+  }
+
+  .card-timeline {
+    text-align: center;
   }
 
   .card-tagline {
     font-size: 14px;
+    text-align: center;
+  }
+
+  .card-right {
+    min-height: auto;
+    padding: 20px;
   }
 }
 
@@ -297,10 +318,12 @@
 
   .case-studies-container {
     gap: 28px;
+    align-items: center;
   }
 
   .case-study-card {
     border-radius: 20px;
+    width: 100%;
   }
 
   .card-content {
@@ -332,8 +355,8 @@
   }
 
   .card-right {
-    min-height: 420px;
-    padding: 16px;
+    min-height: auto;
+    padding: 12px;
     border-radius: 14px;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.01) 100%);
   }
@@ -345,7 +368,7 @@
   .card-cover-image {
     padding: 0;
     object-fit: contain;
-    max-height: 400px;
+    max-height: 280px;
   }
 
   .case-study-card:hover .card-cover-image {
