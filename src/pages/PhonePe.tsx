@@ -567,7 +567,7 @@ const PhonePe: React.FC = () => {
                 <img src={process.env.PUBLIC_URL + "/phonepe/bd.png"} alt="Financial Literacy Feature" />
               </div>
               <p className="feature-description">
-                As financial literacy is a major space we targeted, we made this page which is a fact that can help people while the screen is loading. If a user wants to read more, they can click on the information icon.
+                As financial literacy is a major space we targeted, we made this page which is a fact that can help people while the screen is loading. If a user wants to read more, they can click on the information icon. These bite-sized tips help users build better financial habits over time.
               </p>
             </div>
           </div>
